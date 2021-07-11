@@ -9,11 +9,13 @@ import Foundation
 
 
 class VMRoomResponse: Codable {
+    
     var id: String?
     var createdAt: String?
     var name: String?
     var maxOccupancy: Int?
     var isOccupied: Bool?
+    
     
     enum CodingKeys: String, CodingKey {
         case name

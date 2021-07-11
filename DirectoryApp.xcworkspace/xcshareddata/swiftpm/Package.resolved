@@ -11,6 +11,24 @@
         }
       },
       {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher",
+        "state": {
+          "branch": null,
+          "revision": "44450a8f564d7c0165f736ba2250649ff8d3e556",
+          "version": "6.3.0"
+        }
+      },
+      {
+        "package": "Lottie",
+        "repositoryURL": "https://github.com/airbnb/lottie-ios/",
+        "state": {
+          "branch": null,
+          "revision": "79a0b70547f7c40ea54c67487f935fa2f2eaaadc",
+          "version": "3.2.3"
+        }
+      },
+      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift",
         "state": {

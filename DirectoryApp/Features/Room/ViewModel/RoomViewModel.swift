@@ -13,21 +13,19 @@ class RoomViewModel: BaseViewModel, IRoomViewModel {
     var roomResponse: PublishSubject<VMRoomResponse>  = PublishSubject()
     var roomResponses: PublishSubject<[VMRoomResponse]>  = PublishSubject()
     let roomRepo: IRoomRepo
-    
+    var item =  PublishSubject<Any>()
     
     init(roomRepo: IRoomRepo) {
         self.roomRepo = roomRepo
     }
     
     func getRoom() {
+        self.isLoading.onNext(true)
         roomRepo.getRoom().subscribe ( onNext: { [weak self] res in
+            self?.isLoading.onNext(false)
             if let roomRes = res.data {
                 self?.roomResponses.onNext(roomRes)
-                roomRes.forEach { resroom in
-                    //if let rooms = resroom {
-                    print(resroom.id)
-                   // }
-                }
+              
                 
             }
             else if let apiErr = res.error {
@@ -35,6 +33,7 @@ class RoomViewModel: BaseViewModel, IRoomViewModel {
         }
         },
         onError: { [weak self] error in
+            self?.isLoading.onNext(false)
             self?.throwableError.onNext(error)
         }
 

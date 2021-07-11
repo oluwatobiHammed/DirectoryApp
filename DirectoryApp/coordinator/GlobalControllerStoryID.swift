@@ -30,7 +30,7 @@ class DynamicViewControllerPathResolver {
 
 enum StoryBoardsID: String {
     case boardMain = "Main"
-
+    
     
     func get(for controllerId: ViewControllerID)-> UIViewController? {
         let storyboard = UIStoryboard(name:self.rawValue, bundle: nil)
@@ -65,7 +65,7 @@ enum StoryBoardsID: String {
         return false
     }
     
-   
+    
     
     func navigate(to: ViewControllerID, from: UIViewController, asRoot: Bool = false, completion: (() -> Swift.Void)? = nil)-> Bool {
         if asRoot {
@@ -124,7 +124,8 @@ enum StoryBoardsID: String {
 }
 
 enum ViewControllerID: String{
-   case ViewController = "ViewController"
+    case ViewController = "ViewController"
     case SecondViewController = "SecondViewController"
     case RoomViewController = "RoomViewController"
+    case loading_ViewController = "LoadingViewController"
 }

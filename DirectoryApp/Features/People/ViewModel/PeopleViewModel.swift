@@ -7,6 +7,7 @@
 import RxSwift
 import RxCocoa
 
+
 class PeopleViewModel: BaseViewModel, IPeopleViewModel {
     
     var peopleResponse: PublishSubject<VMPeopleResponse>  = PublishSubject()
@@ -19,19 +20,20 @@ class PeopleViewModel: BaseViewModel, IPeopleViewModel {
     }
     
     func getPeople() {
+        self.isLoading.onNext(true)
         peopleRepo.getPeople().subscribe ( onNext: { [weak self] res in
+            self?.isLoading.onNext(false)
             if let peopleRes = res.data {
                 self?.peopleResponses.onNext(peopleRes)
             }
             else if let apiErr = res.error {
-            self?.apiError.onNext(apiErr)
-        }
+                self?.apiError.onNext(apiErr)
+            }
         },
         onError: { [weak self] error in
+            self?.isLoading.onNext(false)
             self?.throwableError.onNext(error)
-        }
-
-    ).disposed(by: disposeBag)
-    
+        }).disposed(by: disposeBag)
+        
     }
 }

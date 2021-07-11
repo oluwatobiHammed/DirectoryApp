@@ -31,5 +31,7 @@ class PeopleInjections {
         container.storyboardInitCompleted(PeopleViewController.self) { (res, cntrl) in
             cntrl.peopleViewModel = res.resolve(PeopleViewModel.self)
         }
+        
+      
     }
 }

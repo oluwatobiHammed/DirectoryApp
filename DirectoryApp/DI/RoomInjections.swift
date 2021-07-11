@@ -31,5 +31,13 @@ class RoomInjections {
         container.storyboardInitCompleted(RoomViewController.self) { (res, cntrl) in
             cntrl.roomViewModel = res.resolve(RoomViewModel.self)
         }
+        
+        container.storyboardInitCompleted(HomeViewController.self) { (res, cntrl) in
+            cntrl.homeViewModel = res.resolve(IHomeViewModel.self)
+        }
+        
+        container.storyboardInitCompleted(HomeViewController.self) { (res, cntrl) in
+            cntrl.homeViewModel = res.resolve(HomeViewModel.self)
+        }
     }
 }

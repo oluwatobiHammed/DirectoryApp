@@ -11,7 +11,7 @@ target 'DirectoryApp' do
   pod 'Swinject'
   pod 'RxAlamofire'
   pod 'AlamofireObjectMapper'         #, '~> 5.0'
-
+  pod 'ProgressHUD'
   target 'DirectoryAppTests' do
     inherit! :search_paths
     # Pods for testing

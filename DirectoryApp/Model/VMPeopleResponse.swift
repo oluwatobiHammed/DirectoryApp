@@ -8,7 +8,7 @@
 import Foundation
 
 
-class VMPeopleResponse: Codable {
+struct VMPeopleResponse: Codable {
     var avatar: String?
     var createdAt: String?
     var firstName: String?
@@ -20,6 +20,14 @@ class VMPeopleResponse: Codable {
     var latitude: Double?
     var lastName: String?
     var phone: String?
+    
+    
+//    var descriptor: CellDescriptor {
+//        let cellDescriptor = CellDescriptor { (cell: PeopleTableViewCell) in
+//            cell.config(model: self)
+//        }
+//        return cellDescriptor
+//    }
     
 
 }

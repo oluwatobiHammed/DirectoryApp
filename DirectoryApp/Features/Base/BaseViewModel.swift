@@ -12,19 +12,19 @@ import RxSwift
 class BaseViewModel {
     
     let disposeBag = DisposeBag()
-//    let isLoading: PublishSubject<Bool> = PublishSubject()
-//    let alertValue: PublishSubject<AlertValue> = PublishSubject()
+    let isLoading: PublishSubject<Bool> = PublishSubject()
+    let alertValue: PublishSubject<AlertValue> = PublishSubject()
     let apiError: PublishSubject<ApiError> = PublishSubject()
     let throwableError: PublishSubject<Error> = PublishSubject()
-//
-//    func viewDidLoad() { }
-//
-//    func viewWillAppear() { }
-//
-//    func viewDidAppear() { }
-//
-//    func viewWillDisappear() { }
-//
-//    func viewDidDisappear() { }
+
+    func viewDidLoad() { }
+
+    func viewWillAppear() { }
+
+    func viewDidAppear() { }
+
+    func viewWillDisappear() { }
+
+    func viewDidDisappear() { }
     
 }

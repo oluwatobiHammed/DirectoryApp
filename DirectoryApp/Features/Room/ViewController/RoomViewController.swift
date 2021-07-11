@@ -8,31 +8,42 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import ProgressHUD
 
 class RoomViewController: BaseViewController {
     
     var validateDisposable: Disposable?
     var roomViewModel: IRoomViewModel?
     var rooms = [VMRoomResponse]()
+    //var reustableTable: GenericTableView<VMRoomResponse, UITableViewCell>?
+    
+    override func getViewModel() -> BaseViewModel {
+        return self.roomViewModel as! BaseViewModel
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemTeal
         title = "Room"
+       
         // Do any additional setup after loading the view.
-        print("room.createdAt")
         roomViewModel?.getRoom()
-        validateDisposable = roomViewModel?.roomResponses.subscribe({  [weak self] (response) in
-            if let res = response.element {
-                self?.rooms = res
-                self?.rooms.forEach { room in
-                    print(room.createdAt)
-                }
-                
-            }
-            
+        self.validateDisposable = roomViewModel?.roomResponses.bind(onNext:  {  [weak self] (response) in
+            //self?.reustableTable?.reload(data: response)
+            //GenericTableView(frame: view.frame, source: response)
         })
+        setupTable()
     }
     
-
-
+    func setupTable() {
+//        reustableTable = GenericTableView(frame: view.frame, items: rooms, config: { (item, cell) in
+//            if let rooms = item.id {
+//                cell.textLabel?.text = "\(rooms)"
+//            }
+//        }, selectHandler: { (item) in
+//            print(item)
+//        })
+//        view.addSubview(reustableTable!)
+    }
+    
 }

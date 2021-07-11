@@ -69,6 +69,13 @@ protocol ViewControllerPresentRequestDataReceiver {
 
 extension UIViewController {
     
+    func add(child: UIViewController, container: UIView, configure: (_ childView: UIView) -> Void = { _ in }) {
+        addChild(child)
+        container.addSubview(child.view)
+        configure(child.view)
+        child.didMove(toParent: self)
+    }
+    
     func getNavigationViewController()-> UINavigationController? {
         if let navController = self.parent as? UINavigationController {
             return navController
@@ -203,3 +210,12 @@ extension UIViewController {
 }
 
 
+
+extension UINavigationController {
+    func popViewControllerItem(animated: Bool = true, completion: @escaping () -> Void) {
+        CATransaction.begin()
+        CATransaction.setCompletionBlock(completion)
+        popViewController(animated: animated)
+        CATransaction.commit()
+    }
+}

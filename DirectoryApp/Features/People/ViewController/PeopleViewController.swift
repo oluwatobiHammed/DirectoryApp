@@ -7,48 +7,40 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
-class PeopleViewController: UIViewController {
+
+class PeopleViewController: BaseViewController {
     var validateDisposable: Disposable?
+    @IBOutlet weak var tableview: UITableView!
     var peopleViewModel: IPeopleViewModel?
-    var people = [VMPeopleResponse]()
-    var reustableTable: GenericTableView<VMPeopleResponse, UITableViewCell>?
+    override func getViewModel() -> BaseViewModel {
+        return self.peopleViewModel as! BaseViewModel 
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "Second"
-        view.backgroundColor = .systemGreen
-        
-        view.backgroundColor = .red
-        title = "Home"
+        getPeople()
+        tableview.separatorStyle = .none
+        tableview.register(UINib(nibName: "PeopleTableViewCell", bundle: nil), forCellReuseIdentifier: "PeopleTableViewCell")
+    }
+    
+    
+    
+    func getPeople()  {
+        title = "People"
         
         peopleViewModel?.getPeople()
-        validateDisposable = peopleViewModel?.peopleResponses.subscribe({  [weak self] (response) in
-            if let res = response.element {
-                self?.people.append(contentsOf:res)
-                guard let peop = self?.people else {
-                    return
-                }
-                self?.reustableTable?.reload(data: peop)
-                
-            }
-            
-        })
-        
-        setupTable()
+
+        self.validateDisposable  = peopleViewModel?.peopleResponses.bind(to: self.tableview.rx.items) {  (tableView, indexPath, element) in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PeopleTableViewCell") as? PeopleTableViewCell
+            cell?.config(element)
+            return cell!
+        }
+     
     }
     
-    func setupTable() {
-        reustableTable = GenericTableView(frame: view.frame, items: people, config: { (item, cell) in
-            cell.textLabel?.text = item.avatar
-        }, selectHandler: { (item) in
-            print(item)
-        })
-        
-        view.addSubview(reustableTable!)
-    }
     
-
-   
-
+    
+    
+    
 }
