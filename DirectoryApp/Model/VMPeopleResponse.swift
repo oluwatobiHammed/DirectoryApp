@@ -21,14 +21,15 @@ struct VMPeopleResponse: Codable {
     var lastName: String?
     var phone: String?
     
-    
-//    var descriptor: CellDescriptor {
-//        let cellDescriptor = CellDescriptor { (cell: PeopleTableViewCell) in
-//            cell.config(model: self)
-//        }
-//        return cellDescriptor
-//    }
+    var fullName: String? {
+       return firstName! + "" + " " + lastName!
+    }
     
 
 }
 
+
+struct Location {
+    var longitude: Double?
+    var latitude: Double?
+}

@@ -128,4 +128,5 @@ enum ViewControllerID: String{
     case SecondViewController = "SecondViewController"
     case RoomViewController = "RoomViewController"
     case loading_ViewController = "LoadingViewController"
+    case PeopleLoacationViewController = "PeopleLoacationViewController"
 }

@@ -9,7 +9,6 @@ import Foundation
 import RxSwift
 
 protocol IRoomViewModel {
-    var roomResponse: PublishSubject<VMRoomResponse> { get }
     var roomResponses: PublishSubject<[VMRoomResponse]> { get }
     func getRoom()
    

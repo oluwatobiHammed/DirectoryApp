@@ -17,10 +17,8 @@ enum Method: String {
 
 
 public class VMURLRoute: VMUrlRouteProtocol {
-    //fileprivate var alert: CustomAlert?
     private lazy var jsonEncoder = JSONEncoder()
     private lazy var jsonDecoder = JSONDecoder()
-    //private let apiKey = "be8f742bc8e144648c79305c47e60eae"
     private var urlSession: URLSession
     public init(config:URLSessionConfiguration) {
         urlSession = URLSession(configuration:

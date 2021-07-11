@@ -8,17 +8,14 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import ProgressHUD
 class HomeViewController: BaseViewController {
     @IBOutlet weak var peopleButton: UIButton!
     @IBOutlet weak var roomButton: UIButton!
     
-    var homeViewModel: IHomeViewModel?
-
     override func getViewModel() -> BaseViewModel {
-        return self.homeViewModel as? BaseViewModel ?? BaseViewModel()
+        return  BaseViewModel()
     }
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,10 +25,9 @@ class HomeViewController: BaseViewController {
         roomButton.backgroundColor = ThemeManager.currentTheme().mainColor
         peopleButton.roundEdges()
         roomButton.roundEdges()
-        homeViewModel?.goHome()
         
     }
-
+    
     @IBAction func SecondViewButtonTapped(_ sender: UIButton) {
         let _ = StoryBoardsID.boardMain.requestNavigation(to: ViewControllerID.SecondViewController , requestData: nil)
     }

@@ -11,7 +11,8 @@ target 'DirectoryApp' do
   pod 'Swinject'
   pod 'RxAlamofire'
   pod 'AlamofireObjectMapper'         #, '~> 5.0'
-  pod 'ProgressHUD'
+  #Rx Google Maps SDK
+  pod 'GoogleMaps', '5.1.0'
   target 'DirectoryAppTests' do
     inherit! :search_paths
     # Pods for testing

@@ -24,6 +24,7 @@ class RoomViewModel: BaseViewModel, IRoomViewModel {
         roomRepo.getRoom().subscribe ( onNext: { [weak self] res in
             self?.isLoading.onNext(false)
             if let roomRes = res.data {
+                print(roomRes)
                 self?.roomResponses.onNext(roomRes)
               
                 

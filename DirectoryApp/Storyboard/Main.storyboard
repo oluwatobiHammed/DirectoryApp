@@ -83,7 +83,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jpK-hS-4Tf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="jpK-hS-4Tf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -112,13 +112,58 @@
                     <view key="view" contentMode="scaleToFill" id="ODq-Pg-fFb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-hK-iLf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="yQD-fj-gKc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yQD-fj-gKc" firstAttribute="bottom" secondItem="Zud-hK-iLf" secondAttribute="bottom" id="0zt-3y-6Ql"/>
+                            <constraint firstItem="Zud-hK-iLf" firstAttribute="leading" secondItem="yQD-fj-gKc" secondAttribute="leading" id="NSV-ky-Dmn"/>
+                            <constraint firstItem="Zud-hK-iLf" firstAttribute="top" secondItem="yQD-fj-gKc" secondAttribute="top" id="Xuv-nM-pOF"/>
+                            <constraint firstItem="yQD-fj-gKc" firstAttribute="trailing" secondItem="Zud-hK-iLf" secondAttribute="trailing" id="pB1-Fu-edZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="Zud-hK-iLf" id="Taj-Ig-i06"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pzu-wQ-Xy2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3065.217391304348" y="70.982142857142847"/>
+            <point key="canvasLocation" x="3196" y="62"/>
+        </scene>
+        <!--People Loacation View Controller-->
+        <scene sceneID="cgo-IQ-gcn">
+            <objects>
+                <viewController storyboardIdentifier="PeopleLoacationViewController" id="WIm-Ze-EbK" customClass="PeopleLoacationViewController" customModule="DirectoryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X1x-yK-J0V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x34-gO-0lt" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0gF-8u-eKR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x34-gO-0lt" firstAttribute="leading" secondItem="0gF-8u-eKR" secondAttribute="leading" id="co0-8l-HBX"/>
+                            <constraint firstItem="x34-gO-0lt" firstAttribute="top" secondItem="0gF-8u-eKR" secondAttribute="top" id="hCm-d0-cvB"/>
+                            <constraint firstItem="0gF-8u-eKR" firstAttribute="trailing" secondItem="x34-gO-0lt" secondAttribute="trailing" id="qX4-1g-7KG"/>
+                            <constraint firstItem="0gF-8u-eKR" firstAttribute="bottom" secondItem="x34-gO-0lt" secondAttribute="bottom" id="zB2-Ee-HOj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="x34-gO-0lt" id="YdN-Ku-ONn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qs9-UH-QMq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3994" y="62"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6a5-55-yfC">
