@@ -9,7 +9,9 @@ import Foundation
 import RxSwift
 
 
- struct RoomRepoImpl: IRoomRepo {
+struct RoomRepoImpl: IRoomRepo {
+  
+    
  
      let vmRouteProtocol: VMRouteProtocol?
     
@@ -23,4 +25,7 @@ import RxSwift
         return vmRouteProtocol!.getRoom()
     }
    
+    func getRoomFile() -> Observable<[VMRoomResponse]> {
+        return vmRouteProtocol!.getRoomFile()
+    }
 }

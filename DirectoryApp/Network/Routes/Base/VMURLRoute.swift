@@ -27,6 +27,8 @@ public class VMURLRoute: VMUrlRouteProtocol {
     func makeAPIRequestObservable<T>(responseType: T.Type, url: URL, method: Method = .Get,params: [String : String]?) -> Observable<T> where T : Codable {
         var request = URLRequest(url:url)
         //request.addValue(apiKey, forHTTPHeaderField: "X-Auth-Token")
+        request.setValue("text/plain; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.setValue("text/plain", forHTTPHeaderField: "Accept")
         request.httpMethod = method.rawValue.uppercased()
         switch method {
         case .Get:

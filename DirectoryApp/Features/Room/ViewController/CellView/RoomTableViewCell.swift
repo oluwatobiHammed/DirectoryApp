@@ -11,23 +11,26 @@ class RoomTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var capacityLabel: UILabel!
     @IBOutlet weak var isOccupiedLabel: UILabel!
+    @IBOutlet weak var containerUIView: DesignView!
     
     
     
     func configRoom ( _ room: VMRoomResponse) {
-        
-        if let isOccupied = room.is_occupied,
-           let maxOccupancy = room.max_occupancy,
-           let name = room.name{
-            nameLabel.useDefaultFont()
-            capacityLabel.useDefaultFont()
-            isOccupiedLabel.useDefaultFont()
-            print("Name:",name)
-            nameLabel.text = "Name: "
-            capacityLabel.text = "Max Occupancy: " + "\(maxOccupancy)"
-            //imageViewer.alpha = 0
-            //cardView.shadowColor = UIColor.colorFromHexString(favouriteColor)
+        nameLabel.useDefaultFont()
+        capacityLabel.useDefaultFont()
+        isOccupiedLabel.useDefaultFont()
+        if let name = room.name,
+           let capacity = room.maxOccupancy,
+           let availability = room.isAvailable,
+           let isOccupied = room.isOccupied
+        {
+            nameLabel.text = "Room Name: \(name)"
+            capacityLabel.text = "Room Capacity: \(capacity)"
+            isOccupiedLabel.text = availability
+            containerUIView.shadowColor  =  isOccupied ? ThemeManager.currentTheme().dangerColor  :   ThemeManager.currentTheme().sucessColor
+            
         }
+        
     }
     
 }

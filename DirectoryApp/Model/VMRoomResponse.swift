@@ -11,19 +11,22 @@ import Foundation
 struct VMRoomResponse: Codable {
     
     var id: String?
-    var created_at: String?
+    var createdAt: String?
     var name: String?
-    var max_occupancy: Int?
-    var is_occupied: Bool?
+    var maxOccupancy: Int?
+    var isOccupied: Bool?
     
+    var isAvailable: String? {
+        return isOccupied ?? false ? "Rooom Unavailable" : "Room Available"
+    }
     
-//    enum CodingKeys: String, CodingKey {
-//        case name
-//        case id
-//        case createdAt = "created_at"
-//        case maxOccupancy = "max_occupancy"
-//        case isOccupied = "is_occupied"
-//    }
+    enum CodingKeys: String, CodingKey {
+        case name
+        case id
+        case createdAt = "created_at"
+        case maxOccupancy = "max_occupancy"
+        case isOccupied = "is_occupied"
+    }
 }
 
 

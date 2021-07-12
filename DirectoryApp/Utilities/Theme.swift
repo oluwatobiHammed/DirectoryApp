@@ -81,6 +81,13 @@ enum Theme: Int {
         }
     }
     
+    var sucessColor: UIColor? {
+        switch self {
+        case .Default:
+            return ColorSet.Success.asColor
+        }
+    }
+    
     //Customizing the Navigation Bar
     var barStyle: UIBarStyle {
         switch self {

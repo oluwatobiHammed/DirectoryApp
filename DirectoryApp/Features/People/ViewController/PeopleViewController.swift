@@ -29,6 +29,9 @@ class PeopleViewController: BaseViewController {
     
     func getPeople()  {
         title = "People"
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.showAlert(message: "Click on Profile view Location", type: .info)
+        }
         
         peopleViewModel?.getPeople()
 

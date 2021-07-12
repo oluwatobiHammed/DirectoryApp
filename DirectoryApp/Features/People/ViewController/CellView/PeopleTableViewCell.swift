@@ -6,8 +6,6 @@
 //
 
 import UIKit
-
-
 class PeopleTableViewCell: UITableViewCell {
     @IBOutlet weak var imageViewer: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -28,6 +26,7 @@ class PeopleTableViewCell: UITableViewCell {
            let longitude = person.longitude
         {
             imageViewer.setImage(imageUrl: avatar)
+            imageViewer.layer.cornerRadius = 27
             fullNameLabel.useDefaultFont()
             emailLabel.useDefaultFont()
             jobTitleLabel.useDefaultFont()

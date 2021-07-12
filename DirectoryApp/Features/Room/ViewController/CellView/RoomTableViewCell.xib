@@ -78,8 +78,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="capacityLabel" destination="pmm-iJ-QSg" id="PND-ev-LrG"/>
+                <outlet property="containerUIView" destination="dXD-1q-uv6" id="7zc-UH-NLW"/>
                 <outlet property="isOccupiedLabel" destination="VAA-WB-33g" id="aGy-h5-Ovq"/>
                 <outlet property="nameLabel" destination="41K-KF-P3m" id="090-us-7VC"/>
             </connections>

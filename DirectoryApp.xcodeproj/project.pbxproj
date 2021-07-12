@@ -49,6 +49,8 @@
 		3180DAA626971C6600198958 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180DAA526971C6600198958 /* PeopleViewModel.swift */; };
 		3180DAA926972AD600198958 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180DAA826972AD600198958 /* BaseViewModel.swift */; };
 		3180DAB026974EF200198958 /* Injections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180DAAF26974EF200198958 /* Injections.swift */; };
+		319E5603269B6E2C0098BE48 /* response.txt in Resources */ = {isa = PBXBuildFile; fileRef = 319E5602269B6E2B0098BE48 /* response.txt */; };
+		319E5605269C18E70098BE48 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319E5604269C18E70098BE48 /* Bundle+extension.swift */; };
 		31BD3690269752B6003D1EB2 /* PeopleInjections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BD368F269752B6003D1EB2 /* PeopleInjections.swift */; };
 		31BD36942697961F003D1EB2 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BD36932697961F003D1EB2 /* RoomViewController.swift */; };
 		31BD36962697963A003D1EB2 /* IRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BD36952697963A003D1EB2 /* IRoomViewModel.swift */; };
@@ -163,6 +165,8 @@
 		3180DAA526971C6600198958 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		3180DAA826972AD600198958 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		3180DAAF26974EF200198958 /* Injections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injections.swift; sourceTree = "<group>"; };
+		319E5602269B6E2B0098BE48 /* response.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = response.txt; path = ../../../../Desktop/response.txt; sourceTree = "<group>"; };
+		319E5604269C18E70098BE48 /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		31BD368F269752B6003D1EB2 /* PeopleInjections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInjections.swift; sourceTree = "<group>"; };
 		31BD36932697961F003D1EB2 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		31BD36952697963A003D1EB2 /* IRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRoomViewModel.swift; sourceTree = "<group>"; };
@@ -396,6 +400,7 @@
 				31BD36A9269867A9003D1EB2 /* UIColor.swift */,
 				31BD36DC2698C0C0003D1EB2 /* UIButtonExtension.swift */,
 				31D5E044269AF61800BCAC1B /* UIImage+extension.swift */,
+				319E5604269C18E70098BE48 /* Bundle+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 		3180DAAA26974CDC00198958 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				319E5602269B6E2B0098BE48 /* response.txt */,
 				3180D9EC2694AC9000198958 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -782,6 +788,7 @@
 				31BD36C826986F83003D1EB2 /* Montserrat-Light.ttf in Resources */,
 				31BD36CD26986F83003D1EB2 /* Montserrat-Bold.ttf in Resources */,
 				31BD36D526986F83003D1EB2 /* Montserrat-Regular.ttf in Resources */,
+				319E5603269B6E2C0098BE48 /* response.txt in Resources */,
 				31BD36C926986F83003D1EB2 /* Montserrat-ThinItalic.ttf in Resources */,
 				3180DA202694BEFD00198958 /* Main.storyboard in Resources */,
 				31BD36F026999430003D1EB2 /* 17434-soccer-player.json in Resources */,
@@ -972,6 +979,7 @@
 				3180DA1A2694B46300198958 /* Coordinator.swift in Sources */,
 				3180DA8C26970D2600198958 /* ErrorMessage.swift in Sources */,
 				31D5E045269AF61800BCAC1B /* UIImage+extension.swift in Sources */,
+				319E5605269C18E70098BE48 /* Bundle+extension.swift in Sources */,
 				3180DA2D2694EE4600198958 /* GlobalControllerStoryID.swift in Sources */,
 				3180DA6D2695A29900198958 /* ApplicationUtility.swift in Sources */,
 				3180DA302694EF4D00198958 /* UIViewControll+Extension.swift in Sources */,

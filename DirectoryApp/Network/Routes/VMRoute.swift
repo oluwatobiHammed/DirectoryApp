@@ -10,12 +10,12 @@ import Alamofire
 import RxSwift
 
 class VMRoute:  VMURLRoute, VMRouteProtocol  {
+    func getRoomFile() -> Observable<[VMRoomResponse]> {
+        return Bundle.main.decode([VMRoomResponse].self, from: "response.txt")
+    }
     
-    //static var shared = VMRoute(config: .default)
     var requestObservable = VMURLRoute(config: .default)
     func getRoom() -> Observable<ApiResponse<[VMRoomResponse]>> {
-        
-        
         return requestObservable.makeAPIRequestObservable(responseType: ApiResponse<[VMRoomResponse]>.self, url: RemoteApiConstants.Endpoints.getRoom.url, method: .Get, params: [:])
     }
     

@@ -11,5 +11,6 @@ import RxSwift
 protocol IRoomViewModel {
     var roomResponses: PublishSubject<[VMRoomResponse]> { get }
     func getRoom()
+    func getRoomFile()
    
 }

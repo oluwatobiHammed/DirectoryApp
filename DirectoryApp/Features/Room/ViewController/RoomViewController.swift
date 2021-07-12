@@ -20,7 +20,7 @@ class RoomViewController: BaseViewController {
     override func getViewModel() -> BaseViewModel {
         return self.roomViewModel as! BaseViewModel
     }
-    
+    private lazy var jsonDecoder = JSONDecoder()
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Room"
@@ -33,8 +33,9 @@ class RoomViewController: BaseViewController {
     
  
     func getRoom()  {
-        roomViewModel?.getRoom()
-        self.validateDisposable = roomViewModel?.roomResponses.bind(to: self.tableview.rx.items) {  (tableView, index, element) in
+        roomViewModel?.getRoomFile()
+        let rooms = Bundle.main.decode([VMRoomResponse].self, from: "response.txt")
+        self.validateDisposable = rooms.bind(to: self.tableview.rx.items) {  (tableView, index, element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell") as? RoomTableViewCell
             cell?.configRoom(element)
             return cell!
