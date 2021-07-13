@@ -24,6 +24,7 @@ class RoomViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Room"
+        tableview.contentInsetAdjustmentBehavior = .never
         // Do any additional setup after loading the view.
         
         getRoom()
@@ -35,7 +36,7 @@ class RoomViewController: BaseViewController {
     func getRoom()  {
         roomViewModel?.getRoomFile()
         let rooms = Bundle.main.decode([VMRoomResponse].self, from: "response.txt")
-        self.validateDisposable = rooms.bind(to: self.tableview.rx.items) {  (tableView, index, element) in
+        self.validateDisposable = rooms.observe(on: MainScheduler.instance).bind(to: self.tableview.rx.items) {  (tableView, index, element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell") as? RoomTableViewCell
             cell?.configRoom(element)
             return cell!

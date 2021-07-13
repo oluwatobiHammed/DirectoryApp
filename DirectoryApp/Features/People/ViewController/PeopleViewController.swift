@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 
-class PeopleViewController: BaseViewController {
+class PeopleViewController: BaseViewController, UIScrollViewDelegate, UITableViewDelegate {
     var validateDisposable: Disposable?
     @IBOutlet weak var tableview: UITableView!
     var peopleViewModel: IPeopleViewModel?
@@ -21,6 +21,7 @@ class PeopleViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getPeople()
+        tableview.delegate = self
         tableview.separatorStyle = .none
         tableview.register(UINib(nibName: "PeopleTableViewCell", bundle: nil), forCellReuseIdentifier: "PeopleTableViewCell")
     }
@@ -29,13 +30,15 @@ class PeopleViewController: BaseViewController {
     
     func getPeople()  {
         title = "People"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        tableview.contentInsetAdjustmentBehavior = .never
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.showAlert(message: "Click on Profile view Location", type: .info)
         }
         
         peopleViewModel?.getPeople()
 
-        self.validateDisposable  = peopleViewModel?.peopleResponses.bind(to: self.tableview.rx.items) {[weak self]  (tableView, index, element) in
+        self.validateDisposable  = peopleViewModel?.peopleResponses.observe(on: MainScheduler.instance).bind(to: self.tableview.rx.items) {[weak self]  (tableView, index, element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "PeopleTableViewCell") as? PeopleTableViewCell
             cell?.config(element)
             self?.location.latitude = element.latitude
@@ -46,6 +49,13 @@ class PeopleViewController: BaseViewController {
             return cell!
         }
      
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position  > (tableview.contentSize.height-50-scrollView.frame.size.height ){
+            print("fetch more data")
+        }
     }
     
     
