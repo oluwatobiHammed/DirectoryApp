@@ -13,6 +13,7 @@ class RoomTableViewCell: UITableViewCell {
     @IBOutlet weak var isOccupiedLabel: UILabel!
     @IBOutlet weak var containerUIView: DesignView!
     
+    static let Identifier =  String(describing: RoomTableViewCell.self) 
     
     
     func configRoom ( _ room: VMRoomResponse) {

@@ -15,6 +15,7 @@ class PeopleTableViewCell: UITableViewCell {
     @IBOutlet weak var locationButton: UIButton!
     var location = Location()
     
+    static let Identifier =  String(describing: PeopleTableViewCell.self)
     
     func config ( _ person: VMPeopleResponse) {
         if let avatar = person.avatar,
@@ -30,7 +31,7 @@ class PeopleTableViewCell: UITableViewCell {
             fullNameLabel.useDefaultFont()
             emailLabel.useDefaultFont()
             jobTitleLabel.useDefaultFont()
-            fullNameLabel.text = "Name: " + fullName
+            fullNameLabel.text =  fullName
             emailLabel.text = "Email: " + email
             jobTitleLabel.text = "Job Title: " + jobTitle
             cardView.shadowColor = UIColor.colorFromHexString(favouriteColor)

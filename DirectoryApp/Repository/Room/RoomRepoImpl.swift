@@ -25,7 +25,7 @@ struct RoomRepoImpl: IRoomRepo {
         return vmRouteProtocol!.getRoom()
     }
    
-    func getRoomFile() -> Observable<[VMRoomResponse]> {
+    func getRoomFile() -> Observable<ApiResponse<[VMRoomResponse]>> {
         return vmRouteProtocol!.getRoomFile()
     }
 }

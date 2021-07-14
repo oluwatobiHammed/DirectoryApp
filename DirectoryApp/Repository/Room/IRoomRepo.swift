@@ -13,5 +13,5 @@ import RxSwift
 
  protocol IRoomRepo {
     func getRoom() -> Observable<ApiResponse<[VMRoomResponse]>>
-    func getRoomFile() -> Observable<[VMRoomResponse]>
+    func getRoomFile() -> Observable<ApiResponse<[VMRoomResponse]>>
 }

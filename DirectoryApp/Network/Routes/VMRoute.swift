@@ -10,8 +10,8 @@ import Alamofire
 import RxSwift
 
 class VMRoute:  VMURLRoute, VMRouteProtocol  {
-    func getRoomFile() -> Observable<[VMRoomResponse]> {
-        return Bundle.main.decode([VMRoomResponse].self, from: "response.txt")
+    func getRoomFile() -> Observable<ApiResponse<[VMRoomResponse]>> {
+        return Bundle.main.decode(ApiResponse<[VMRoomResponse]>.self, from: "response.txt")
     }
     
     var requestObservable = VMURLRoute(config: .default)

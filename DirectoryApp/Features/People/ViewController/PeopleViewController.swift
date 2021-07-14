@@ -23,7 +23,7 @@ class PeopleViewController: BaseViewController, UIScrollViewDelegate, UITableVie
         getPeople()
         tableview.delegate = self
         tableview.separatorStyle = .none
-        tableview.register(UINib(nibName: "PeopleTableViewCell", bundle: nil), forCellReuseIdentifier: "PeopleTableViewCell")
+        tableview.register(UINib(nibName: PeopleTableViewCell.Identifier, bundle: nil), forCellReuseIdentifier:  PeopleTableViewCell.Identifier)
     }
     
     
@@ -39,7 +39,7 @@ class PeopleViewController: BaseViewController, UIScrollViewDelegate, UITableVie
         peopleViewModel?.getPeople()
 
         self.validateDisposable  = peopleViewModel?.peopleResponses.observe(on: MainScheduler.instance).bind(to: self.tableview.rx.items) {[weak self]  (tableView, index, element) in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PeopleTableViewCell") as? PeopleTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier:  PeopleTableViewCell.Identifier) as? PeopleTableViewCell
             cell?.config(element)
             self?.location.latitude = element.latitude
             self?.location.longitude = element.longitude

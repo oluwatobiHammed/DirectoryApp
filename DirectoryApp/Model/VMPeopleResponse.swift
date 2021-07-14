@@ -22,7 +22,7 @@ struct VMPeopleResponse: Codable {
     var phone: String?
     
     var fullName: String? {
-       return firstName! + "" + " " + lastName!
+       return "Name: " + firstName! + "" + " " + lastName!
     }
     
 

@@ -11,7 +11,7 @@ import RxSwift
 protocol VMRouteProtocol {
     
     func getRoom() -> Observable<ApiResponse<[VMRoomResponse]>>
-    func getRoomFile() -> Observable<[VMRoomResponse]>
+    func getRoomFile() -> Observable<ApiResponse<[VMRoomResponse]>>
     func getPeople() -> Observable<ApiResponse<[VMPeopleResponse]>>
     
 }
