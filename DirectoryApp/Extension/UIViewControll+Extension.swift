@@ -128,8 +128,7 @@ extension UIViewController {
     }
     
     func addToParent(_ child: UIViewController, slideFrom: SlideDirection? = nil, duration: TimeInterval = 0.5, completion: EmptyCallback? = nil) {
-        // ensure keyboard is dismissed
-        //self.dismissKeyboard()
+    
         
     
         var navigationBar: UINavigationBar? = nil
@@ -186,9 +185,9 @@ extension UIViewController {
         }
         
         UIView.animate(withDuration: duration + 0.3, animations: {
-            if let navBar = navigationBar {
-//                navBar.alpha = 0
-            }
+//            if let navBar = navigationBar {
+////                navBar.alpha = 0
+//            }
         }) {
             (completed: Bool) in
             if completed {

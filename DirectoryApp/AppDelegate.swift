@@ -13,7 +13,7 @@ import GoogleMaps
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var coordinator: MainCoordinator?
+    
     var window: UIWindow?
     
     

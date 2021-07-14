@@ -6,11 +6,12 @@ target 'DirectoryApp' do
   use_frameworks!
 
   # Pods for DirectoryApp
-  pod 'Alamofire'                     #, '~> 4.7'
   pod 'SwinjectStoryboard'
   pod 'Swinject'
-  pod 'RxAlamofire'
-  pod 'AlamofireObjectMapper'         #, '~> 5.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Kingfisher'
+  pod 'lottie-ios'
   #Rx Google Maps SDK
   pod 'GoogleMaps', '5.1.0'
   target 'DirectoryAppTests' do

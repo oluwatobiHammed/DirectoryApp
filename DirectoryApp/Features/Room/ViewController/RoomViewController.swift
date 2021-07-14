@@ -34,7 +34,7 @@ class RoomViewController: BaseViewController {
     
  
     func getRoom()  {
-        roomViewModel?.getRoomFile()
+        //roomViewModel?.getRoomFile()
         let rooms = Bundle.main.decode([VMRoomResponse].self, from: "response.txt")
 //        self.validateDisposable = roomViewModel?.roomResponses.subscribe(onNext: { res in
 //            print(res)
@@ -43,6 +43,7 @@ class RoomViewController: BaseViewController {
 //        },
 //        onCompleted: {},
 //        onDisposed: {})
+        
         self.validateDisposable = rooms.observe(on: MainScheduler.instance).bind(to: self.tableview.rx.items) {  (tableView, index, element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: RoomTableViewCell.Identifier) as? RoomTableViewCell
             cell?.configRoom(element)
