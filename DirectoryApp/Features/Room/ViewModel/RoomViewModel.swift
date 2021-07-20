@@ -10,7 +10,7 @@ import RxCocoa
 
 class RoomViewModel: BaseViewModel, IRoomViewModel {
    
-    var roomResponses: PublishSubject<[VMRoomResponse]>  = PublishSubject()
+    var roomResponses: PublishSubject<[RoomCellViewModel]>  = PublishSubject()
     let roomRepo: IRoomRepo
     
     init(roomRepo: IRoomRepo) {
@@ -22,7 +22,8 @@ class RoomViewModel: BaseViewModel, IRoomViewModel {
         roomRepo.getRoom().subscribe ( onNext: { [weak self] res in
             self?.isLoading.onNext(false)
             if let roomRes = res.data {
-                self?.roomResponses.onNext(roomRes)
+                self?.roomResponses.onNext(roomRes.map({return RoomCellViewModel(room: $0)
+                }))
             }
             else if let apiErr = res.error {
             self?.apiError.onNext(apiErr)
@@ -37,26 +38,4 @@ class RoomViewModel: BaseViewModel, IRoomViewModel {
     
     }
     
-    func getRoomFile() {
-        self.isLoading.onNext(true)
-        roomRepo.getRoomFile().subscribe ( onNext: { [weak self] res in
-            self?.isLoading.onNext(false)
-            if let roomRes = res.data {
-            self?.roomResponses.onNext(roomRes)
-                print(res)
-              
-                
-            }
-//            else if let apiErr = res.error {
-//            self?.apiError.onNext(apiErr)
-//         }
-        },
-        onError: { [weak self] error in
-            self?.isLoading.onNext(false)
-            
-            self?.throwableError.onNext(error)
-        }
-
-    ).disposed(by: disposeBag)
-    }
 }

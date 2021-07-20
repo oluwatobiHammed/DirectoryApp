@@ -10,6 +10,7 @@
 		0EF5084B429BB2CAC27C5282 /* Pods_DirectoryAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2047869DBC85969F4F2AD2B /* Pods_DirectoryAppTests.framework */; };
 		17D525290BF47134985845A7 /* Pods_DirectoryApp_DirectoryAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AAE5B1B1DFCD1DA76180DC /* Pods_DirectoryApp_DirectoryAppUITests.framework */; };
 		316A799E26A6F4350079E46D /* PeopleTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A799D26A6F4350079E46D /* PeopleTableViewCellViewModel.swift */; };
+		316A79A126A6F7760079E46D /* RoomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A79A026A6F7760079E46D /* RoomCellViewModel.swift */; };
 		3180D9E42694AC8F00198958 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180D9E32694AC8F00198958 /* AppDelegate.swift */; };
 		3180D9E62694AC8F00198958 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180D9E52694AC8F00198958 /* SceneDelegate.swift */; };
 		3180D9E82694AC8F00198958 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180D9E72694AC8F00198958 /* HomeViewController.swift */; };
@@ -115,6 +116,7 @@
 
 /* Begin PBXFileReference section */
 		316A799D26A6F4350079E46D /* PeopleTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		316A79A026A6F7760079E46D /* RoomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCellViewModel.swift; sourceTree = "<group>"; };
 		3180D9E02694AC8F00198958 /* DirectoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3180D9E32694AC8F00198958 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3180D9E52694AC8F00198958 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +252,14 @@
 			);
 			name = ViewModel;
 			path = ../../../../../../ViewModel;
+			sourceTree = "<group>";
+		};
+		316A799F26A6F7470079E46D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				316A79A026A6F7760079E46D /* RoomCellViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3180D9D72694AC8F00198958 = {
@@ -608,6 +618,7 @@
 		31D5E04D269B52FB00BCAC1B /* CellView */ = {
 			isa = PBXGroup;
 			children = (
+				316A799F26A6F7470079E46D /* ViewModel */,
 				31D5E04E269B532600BCAC1B /* RoomTableViewCell.swift */,
 				31D5E04F269B532600BCAC1B /* RoomTableViewCell.xib */,
 			);
@@ -986,6 +997,7 @@
 				31BD369826979656003D1EB2 /* RoomViewModel.swift in Sources */,
 				3180DA8A26970BA100198958 /* RemoteApiConstants.swift in Sources */,
 				3180DA8E26970D4700198958 /* ApiError.swift in Sources */,
+				316A79A126A6F7760079E46D /* RoomCellViewModel.swift in Sources */,
 				31BD36DB26989F5F003D1EB2 /* CustomAlert.swift in Sources */,
 				3180DA9D2697196D00198958 /* IRoomRepo.swift in Sources */,
 				3180DAA626971C6600198958 /* PeopleViewModel.swift in Sources */,
