@@ -9,17 +9,11 @@ import Foundation
 
 
 struct VMPeopleResponse: Codable {
-    var avatar: String?
-    var createdAt: String?
-    var firstName: String?
-    var id: String?
-    var longitude: Double?
-    var favouriteColor: String?
-    var email: String?
-    var jobTitle: String?
-    var latitude: Double?
-    var lastName: String?
-    var phone: String?
+    let avatar, createdAt, firstName,
+        id, favouriteColor, email,
+        jobTitle, lastName,
+        phone: String?
+    let longitude, latitude: Double?
     
     var fullName: String? {
        return "Name: " + firstName! + "" + " " + lastName!

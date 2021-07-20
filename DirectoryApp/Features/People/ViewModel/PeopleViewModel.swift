@@ -10,8 +10,7 @@ import RxCocoa
 
 class PeopleViewModel: BaseViewModel, IPeopleViewModel {
     
-    var peopleResponse: PublishSubject<VMPeopleResponse>  = PublishSubject()
-    var peopleResponses: PublishSubject<[VMPeopleResponse]>  = PublishSubject()
+    var peopleResponses: PublishSubject<[PeopleTableViewCellViewModel]>  = PublishSubject()
     let peopleRepo: IPeopleRepo
     
     
@@ -24,7 +23,8 @@ class PeopleViewModel: BaseViewModel, IPeopleViewModel {
         peopleRepo.getPeople().subscribe ( onNext: { [weak self] res in
             self?.isLoading.onNext(false)
             if let peopleRes = res.data {
-                self?.peopleResponses.onNext(peopleRes)
+                self?.peopleResponses.onNext(peopleRes.map({return PeopleTableViewCellViewModel(people: $0)
+                }))
             }
             else if let apiErr = res.error {
                 self?.apiError.onNext(apiErr)

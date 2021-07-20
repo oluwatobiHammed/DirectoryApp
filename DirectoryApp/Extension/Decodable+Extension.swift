@@ -13,7 +13,7 @@ extension Decodable {
     static func mapTo(jsonString: String) throws -> Self? {
         
         let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.keyDecodingStrategy = .useDefaultKeys
         return try decoder.decode(Self.self, from: Data(jsonString.utf8))
     }
 }

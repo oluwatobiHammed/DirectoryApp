@@ -9,8 +9,7 @@ import Foundation
 import RxSwift
 
 protocol IPeopleViewModel {
-    var peopleResponse: PublishSubject<VMPeopleResponse> { get }
-    var peopleResponses: PublishSubject<[VMPeopleResponse]> { get }
+    var peopleResponses: PublishSubject<[PeopleTableViewCellViewModel]> { get }
     func getPeople()
    
 }

@@ -10,9 +10,7 @@ import Foundation
 
 struct VMRoomResponse: Codable {
     
-    var id: String?
-    var createdAt: String?
-    var name: String?
+    let id, createdAt, name: String?
     var maxOccupancy: Int?
     var isOccupied: Bool?
     
@@ -21,8 +19,7 @@ struct VMRoomResponse: Codable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case name
-        case id
+        case name, id
         case createdAt = "created_at"
         case maxOccupancy = "max_occupancy"
         case isOccupied = "is_occupied"

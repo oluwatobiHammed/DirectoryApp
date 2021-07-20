@@ -17,29 +17,17 @@ class PeopleTableViewCell: UITableViewCell {
     
     static let Identifier =  String(describing: PeopleTableViewCell.self)
     
-    func config ( _ person: VMPeopleResponse) {
-        if let avatar = person.avatar,
-           let email = person.email,
-           let fullName = person.fullName,
-           let jobTitle = person.jobTitle,
-           let favouriteColor = person.favouriteColor,
-           let latitude = person.latitude,
-           let longitude = person.longitude
-        {
-            imageViewer.setImage(imageUrl: avatar)
-            imageViewer.layer.cornerRadius = 27
-            fullNameLabel.useDefaultFont()
-            emailLabel.useDefaultFont()
-            jobTitleLabel.useDefaultFont()
-            fullNameLabel.text =  fullName
-            emailLabel.text = "Email: " + email
-            jobTitleLabel.text = "Job Title: " + jobTitle
-            cardView.shadowColor = UIColor.colorFromHexString(favouriteColor)
-            location.latitude = latitude
-            location.longitude = longitude
-        }
-        
-        
+    func config ( _ person: PeopleTableViewCellViewModel)
+    {
+        imageViewer.layer.cornerRadius = 27
+        fullNameLabel.useDefaultFont()
+        emailLabel.useDefaultFont()
+        jobTitleLabel.useDefaultFont()
+        imageViewer.setImage(imageUrl: person.avatar)
+        fullNameLabel.text =  person.name
+        emailLabel.text =  person.email
+        jobTitleLabel.text =  person.jobTitle
+        cardView.shadowColor = UIColor.colorFromHexString(person.favouriteColor)
     }
     
 
