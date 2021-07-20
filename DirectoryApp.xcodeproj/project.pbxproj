@@ -11,6 +11,7 @@
 		17D525290BF47134985845A7 /* Pods_DirectoryApp_DirectoryAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AAE5B1B1DFCD1DA76180DC /* Pods_DirectoryApp_DirectoryAppUITests.framework */; };
 		316A799E26A6F4350079E46D /* PeopleTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A799D26A6F4350079E46D /* PeopleTableViewCellViewModel.swift */; };
 		316A79A126A6F7760079E46D /* RoomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A79A026A6F7760079E46D /* RoomCellViewModel.swift */; };
+		316A79A326A71D750079E46D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A79A226A71D750079E46D /* UIImage+Extension.swift */; };
 		3180D9E42694AC8F00198958 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180D9E32694AC8F00198958 /* AppDelegate.swift */; };
 		3180D9E62694AC8F00198958 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180D9E52694AC8F00198958 /* SceneDelegate.swift */; };
 		3180D9E82694AC8F00198958 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180D9E72694AC8F00198958 /* HomeViewController.swift */; };
@@ -90,7 +91,7 @@
 		31BD36FE2699CD6E003D1EB2 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BD36FD2699CD6E003D1EB2 /* DesignView.swift */; };
 		31D5E042269AEBEF00BCAC1B /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D5E040269AEBEF00BCAC1B /* PeopleTableViewCell.swift */; };
 		31D5E043269AEBEF00BCAC1B /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31D5E041269AEBEF00BCAC1B /* PeopleTableViewCell.xib */; };
-		31D5E045269AF61800BCAC1B /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D5E044269AF61800BCAC1B /* UIImage+extension.swift */; };
+		31D5E045269AF61800BCAC1B /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D5E044269AF61800BCAC1B /* UIImageView+extension.swift */; };
 		31D5E04C269B17D100BCAC1B /* PeopleLoacationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D5E04B269B17D100BCAC1B /* PeopleLoacationViewController.swift */; };
 		31D5E050269B532600BCAC1B /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D5E04E269B532600BCAC1B /* RoomTableViewCell.swift */; };
 		31D5E051269B532600BCAC1B /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31D5E04F269B532600BCAC1B /* RoomTableViewCell.xib */; };
@@ -117,6 +118,7 @@
 /* Begin PBXFileReference section */
 		316A799D26A6F4350079E46D /* PeopleTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		316A79A026A6F7760079E46D /* RoomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCellViewModel.swift; sourceTree = "<group>"; };
+		316A79A226A71D750079E46D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		3180D9E02694AC8F00198958 /* DirectoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3180D9E32694AC8F00198958 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3180D9E52694AC8F00198958 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,7 +204,7 @@
 		31BD36FD2699CD6E003D1EB2 /* DesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
 		31D5E040269AEBEF00BCAC1B /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		31D5E041269AEBEF00BCAC1B /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
-		31D5E044269AF61800BCAC1B /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		31D5E044269AF61800BCAC1B /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
 		31D5E04B269B17D100BCAC1B /* PeopleLoacationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleLoacationViewController.swift; sourceTree = "<group>"; };
 		31D5E04E269B532600BCAC1B /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		31D5E04F269B532600BCAC1B /* RoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
@@ -398,8 +400,9 @@
 				31BD36A32698620D003D1EB2 /* UILabelExtension.swift */,
 				31BD36A9269867A9003D1EB2 /* UIColor.swift */,
 				31BD36DC2698C0C0003D1EB2 /* UIButtonExtension.swift */,
-				31D5E044269AF61800BCAC1B /* UIImage+extension.swift */,
+				31D5E044269AF61800BCAC1B /* UIImageView+extension.swift */,
 				319E5604269C18E70098BE48 /* Bundle+extension.swift */,
+				316A79A226A71D750079E46D /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -965,7 +968,7 @@
 				3180DA562695869600198958 /* VMURLRoute.swift in Sources */,
 				31BD36DD2698C0C0003D1EB2 /* UIButtonExtension.swift in Sources */,
 				3180DA8C26970D2600198958 /* ErrorMessage.swift in Sources */,
-				31D5E045269AF61800BCAC1B /* UIImage+extension.swift in Sources */,
+				31D5E045269AF61800BCAC1B /* UIImageView+extension.swift in Sources */,
 				319E5605269C18E70098BE48 /* Bundle+extension.swift in Sources */,
 				3180DA2D2694EE4600198958 /* GlobalControllerStoryID.swift in Sources */,
 				316A799E26A6F4350079E46D /* PeopleTableViewCellViewModel.swift in Sources */,
@@ -990,6 +993,7 @@
 				3180DA9026970D6B00198958 /* ApiResponse.swift in Sources */,
 				31BD36A626986292003D1EB2 /* Theme.swift in Sources */,
 				31BD36AA269867A9003D1EB2 /* UIColor.swift in Sources */,
+				316A79A326A71D750079E46D /* UIImage+Extension.swift in Sources */,
 				3180DA8726970ACA00198958 /* Decodable+Extension.swift in Sources */,
 				3180DA98269716E200198958 /* IPeopleRepo.swift in Sources */,
 				3180D9E62694AC8F00198958 /* SceneDelegate.swift in Sources */,

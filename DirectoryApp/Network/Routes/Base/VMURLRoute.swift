@@ -19,11 +19,13 @@ enum Method: String {
 public class VMURLRoute: VMUrlRouteProtocol {
     private lazy var jsonEncoder = JSONEncoder()
     private lazy var jsonDecoder = JSONDecoder()
-    private var urlSession: URLSession
-    public init(config:URLSessionConfiguration) {
-        urlSession = URLSession(configuration:
-            URLSessionConfiguration.default)
-    }
+    //private var urlSession: URLSession
+    private lazy var urlSession: URLSession = {
+        URLCache.shared.memoryCapacity = 512 * 1024 * 1024
+        let configuration =  URLSessionConfiguration.default
+        configuration.requestCachePolicy = .returnCacheDataElseLoad
+        return  URLSession(configuration: configuration)
+    }()
     func makeAPIRequestObservable<T>(responseType: T.Type, url: URL, method: Method = .Get,params: [String : String]?) -> Observable<T> where T : Codable {
         var request = URLRequest(url:url)
         //request.addValue(apiKey, forHTTPHeaderField: "X-Auth-Token")

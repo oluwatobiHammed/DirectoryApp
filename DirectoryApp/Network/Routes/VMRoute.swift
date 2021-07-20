@@ -13,13 +13,13 @@ class VMRoute:  VMURLRoute, VMRouteProtocol  {
         return Bundle.main.decode(ApiResponse<[VMRoomResponse]>.self, from: "response.txt")
     }
     
-    var requestObservable = VMURLRoute(config: .default)
+    
     func getRoom() -> Observable<ApiResponse<[VMRoomResponse]>> {
-        return requestObservable.makeAPIRequestObservable(responseType: ApiResponse<[VMRoomResponse]>.self, url: RemoteApiConstants.Endpoints.getRoom.url, method: .Get, params: [:])
+        return makeAPIRequestObservable(responseType: ApiResponse<[VMRoomResponse]>.self, url: RemoteApiConstants.Endpoints.getRoom.url, method: .Get, params: [:])
     }
     
     func getPeople() -> Observable<ApiResponse<[VMPeopleResponse]>> {
-        return requestObservable.makeAPIRequestObservable(responseType: ApiResponse<[VMPeopleResponse]>.self, url: RemoteApiConstants.Endpoints.getPeople.url, method: .Get, params: [:])
+        return makeAPIRequestObservable(responseType: ApiResponse<[VMPeopleResponse]>.self, url: RemoteApiConstants.Endpoints.getPeople.url, method: .Get, params: [:])
     }
     
     
