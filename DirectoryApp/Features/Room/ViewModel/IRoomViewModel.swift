@@ -8,9 +8,9 @@
 import Foundation
 import RxSwift
 
-protocol IRoomViewModel {
+protocol IRoomViewModel: AnyObject {
     var roomResponses: PublishSubject<[RoomCellViewModel]> { get }
+    init(roomRepo: IRoomRepo)
     func getRoom()
-    //func getRoomFile()
    
 }

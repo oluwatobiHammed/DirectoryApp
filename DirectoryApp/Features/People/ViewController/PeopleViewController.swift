@@ -15,6 +15,7 @@ class PeopleViewController: BaseViewController, UIScrollViewDelegate, UITableVie
     @IBOutlet weak var tableview: UITableView!
     var peopleViewModel: IPeopleViewModel?
     var location = Location()
+    var fetchingMore = false
     override func getViewModel() -> BaseViewModel {
         return self.peopleViewModel as! BaseViewModel 
     }
@@ -32,32 +33,45 @@ class PeopleViewController: BaseViewController, UIScrollViewDelegate, UITableVie
         title = "People"
         navigationController?.navigationBar.prefersLargeTitles = true
         tableview.contentInsetAdjustmentBehavior = .never
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.showAlert(message: "Click on Profile view Location", type: .info)
+       
+        if peopleViewModel?.peopleResponses != nil {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.showAlert(message: "Click on Profile view Location", type: .info)
+            }
         }
-        
         peopleViewModel?.getPeople()
-
-        self.validateDisposable  = peopleViewModel?.peopleResponses.observe(on: MainScheduler.instance).bind(to: self.tableview.rx.items) {[weak self]  (tableView, index, element) in
-            let cell = tableView.dequeueReusableCell(withIdentifier:  PeopleTableViewCell.Identifier) as? PeopleTableViewCell
-            cell?.config(element)
+        self.validateDisposable  = peopleViewModel?.peopleResponses.observeOn(MainScheduler.instance).bind(to: self.tableview.rx.items) {[weak self]  (tableView, index, element) in
+          
+            let cell: PeopleTableViewCell = tableView.dequeueReusableCell()
+            cell.config(element)
             self?.location.latitude = element.latitude
             self?.location.longitude = element.longitude
-            cell?.addTapGesture {
+            cell.addTapGesture {
                 let _ = StoryBoardsID.boardMain.requestNavigation(to: ViewControllerID.PeopleLoacationViewController , requestData: self?.location)
             }
-            return cell!
+            return cell
         }
-     
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let position = scrollView.contentOffset.y
-        if position  > (tableview.contentSize.height-50-scrollView.frame.size.height ){
-            print("fetch more data")
+        let offSetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offSetY > contentHeight - scrollView.frame.height {
+            if !fetchingMore {
+                beginBatchFetch()
+            }
+            
         }
+
     }
     
+    
+    func beginBatchFetch()  {
+        fetchingMore = true
+        print("fetch more data")
+    }
     
     
     

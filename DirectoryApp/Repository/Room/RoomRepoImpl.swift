@@ -22,10 +22,8 @@ struct RoomRepoImpl: IRoomRepo {
     }
     
     func getRoom() -> Observable<ApiResponse<[VMRoomResponse]>> {
-        return vmRouteProtocol!.getRoom()
+        return vmRouteProtocol!.getRoom(urlString: RemoteApiConstants.Endpoints.getRoom.stringValue)
     }
    
-    func getRoomFile() -> Observable<ApiResponse<[VMRoomResponse]>> {
-        return vmRouteProtocol!.getRoomFile()
-    }
+   
 }

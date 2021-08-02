@@ -11,16 +11,13 @@ import RxSwift
 
  struct PeopleRepoImpl: IPeopleRepo {
  
-     let vmRouteProtocol: VMRouteProtocol?
-    
-    
+    private var vmRouteProtocol: VMRouteProtocol
      init(vmRouteProtocol: VMRouteProtocol) {
         self.vmRouteProtocol = vmRouteProtocol
-        
     }
     
     func getPeople() -> Observable<ApiResponse<[VMPeopleResponse]>> {
-        return vmRouteProtocol!.getPeople()
+        return vmRouteProtocol.getPeople(urlString: RemoteApiConstants.Endpoints.getPeople.stringValue)
     }
    
 }

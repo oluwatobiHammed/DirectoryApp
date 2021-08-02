@@ -7,19 +7,30 @@
 
 import Foundation
 import RxSwift
+import Alamofire
 
-class VMRoute:  VMURLRoute, VMRouteProtocol  {
-    func getRoomFile() -> Observable<ApiResponse<[VMRoomResponse]>> {
-        return Bundle.main.decode(ApiResponse<[VMRoomResponse]>.self, from: "response.txt")
+class VMRoute: VMRouteProtocol  {
+        private let baseNetwork:  BaseNetWorkProtocol
+        private var timeOut : TimeInterval = 30
+        private lazy var urlSession: URLSessionConfiguration = {
+            urlSession.requestCachePolicy = .useProtocolCachePolicy
+            urlSession.timeoutIntervalForResource = timeOut
+            urlSession.timeoutIntervalForRequest = timeOut
+            return urlSession
+        }()
+    
+    init(baseNetwork: BaseNetWorkProtocol, urlSession: URLSessionConfiguration = .default) {
+        self.baseNetwork = baseNetwork
+        self.urlSession = urlSession
+        
     }
     
-    
-    func getRoom() -> Observable<ApiResponse<[VMRoomResponse]>> {
-        return makeAPIRequestObservable(responseType: ApiResponse<[VMRoomResponse]>.self, url: RemoteApiConstants.Endpoints.getRoom.url, method: .Get, params: [:])
+    func getRoom(urlString: String) -> Observable<ApiResponse<[VMRoomResponse]>> {
+        return baseNetwork.makeAPIRequestObservable(responseType: ApiResponse<[VMRoomResponse]>.self, url: urlString, urlSession: urlSession, method: .get, params: [:], encoding: URLEncoding.default)
     }
     
-    func getPeople() -> Observable<ApiResponse<[VMPeopleResponse]>> {
-        return makeAPIRequestObservable(responseType: ApiResponse<[VMPeopleResponse]>.self, url: RemoteApiConstants.Endpoints.getPeople.url, method: .Get, params: [:])
+    func getPeople(urlString: String) -> Observable<ApiResponse<[VMPeopleResponse]>> {
+        return baseNetwork.makeAPIRequestObservable(responseType: ApiResponse<[VMPeopleResponse]>.self, url: urlString, urlSession: urlSession, method: .get, params: [:], encoding: URLEncoding.default)
     }
     
     

@@ -11,10 +11,10 @@ import RxCocoa
 class PeopleViewModel: BaseViewModel, IPeopleViewModel {
     
     var peopleResponses: PublishSubject<[PeopleTableViewCellViewModel]>  = PublishSubject()
-    let peopleRepo: IPeopleRepo
+    private let peopleRepo: IPeopleRepo
     
     
-    init(peopleRepo: IPeopleRepo) {
+    required init(peopleRepo: IPeopleRepo) {
         self.peopleRepo = peopleRepo
     }
     
@@ -27,7 +27,9 @@ class PeopleViewModel: BaseViewModel, IPeopleViewModel {
                 }))
             }
             else if let apiErr = res.error {
+                print("Redirect to ", apiErr)
                 self?.apiError.onNext(apiErr)
+                
             }
         },
         onError: { [weak self] error in

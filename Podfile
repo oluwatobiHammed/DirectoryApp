@@ -12,6 +12,7 @@ target 'DirectoryApp' do
   pod 'RxCocoa'
   pod 'Kingfisher'
   pod 'lottie-ios'
+  pod 'RxAlamofire', '~> 5'
   #Rx Google Maps SDK
   pod 'GoogleMaps', '5.1.0'
   target 'DirectoryAppTests' do

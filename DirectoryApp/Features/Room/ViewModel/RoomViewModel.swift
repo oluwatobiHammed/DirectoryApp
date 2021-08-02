@@ -11,9 +11,9 @@ import RxCocoa
 class RoomViewModel: BaseViewModel, IRoomViewModel {
    
     var roomResponses: PublishSubject<[RoomCellViewModel]>  = PublishSubject()
-    let roomRepo: IRoomRepo
+    private let roomRepo: IRoomRepo
     
-    init(roomRepo: IRoomRepo) {
+    required init(roomRepo: IRoomRepo) {
         self.roomRepo = roomRepo
     }
     

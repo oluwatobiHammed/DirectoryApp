@@ -35,10 +35,10 @@ class RoomViewController: BaseViewController {
  
     func getRoom()  {
         roomViewModel?.getRoom()
-        self.validateDisposable = roomViewModel?.roomResponses.observe(on: MainScheduler.instance).bind(to: self.tableview.rx.items) {  (tableView, index, element) in
-            let cell = tableView.dequeueReusableCell(withIdentifier: RoomTableViewCell.Identifier) as? RoomTableViewCell
-            cell?.configRoom(element)
-            return cell!
+        self.validateDisposable = roomViewModel?.roomResponses.observeOn(MainScheduler.instance).bind(to: self.tableview.rx.items) {  (tableView, index, element) in
+            let cell:RoomTableViewCell = tableView.dequeueReusableCell()
+            cell.configRoom(element)
+            return cell
         }
 
     }

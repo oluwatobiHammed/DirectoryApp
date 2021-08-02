@@ -37,13 +37,28 @@ class RemoteApiConstants {
             case .getRoom:
                 return     Endpoints.BASE_URL + "TGnC5c8e"
             case .getPeople:
-                return     Endpoints.BASE_URL  + "kg02uve4"
+                return    Endpoints.BASE_URL + "kg02u"
             
             }
         }
         
-         var url: URL {
-            return (URL(string: stringValue))!
+    }
+    
+}
+
+
+enum SignupError: LocalizedError, Equatable {
+    
+    case invalidResponseModel
+    case invalidRequestURLString
+    case failedRequest(description: String)
+    
+    var errorDescription: String? {
+        switch self {
+        case .failedRequest(let description):
+            return description
+        case .invalidResponseModel, .invalidRequestURLString:
+            return ""
         }
     }
     

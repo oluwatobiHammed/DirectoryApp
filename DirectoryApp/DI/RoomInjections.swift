@@ -11,7 +11,11 @@ import SwinjectStoryboard
 
 class RoomInjections {
     static func setup(container: Container) {
-        container.register(VMRouteProtocol.self) { _ in VMRoute() }
+        container.register(BaseNetWorkProtocol.self) { res in
+            BaseNetWorkServices() }
+        container.register(VMRouteProtocol.self) { res in
+            VMRoute(baseNetwork: res.resolve(BaseNetWorkProtocol.self)!)
+        }
         container.register(IRoomRepo.self) { res in
             RoomRepoImpl(vmRouteProtocol: res.resolve(VMRouteProtocol.self)!)
         }

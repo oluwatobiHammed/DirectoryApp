@@ -11,8 +11,14 @@ import SwinjectStoryboard
 
 class PeopleInjections {
     static func setup(container: Container) {
-        container.register(VMRouteProtocol.self) { _ in VMRoute() }
+        container.register(BaseNetWorkProtocol.self) { res in
+            BaseNetWorkServices() }
+        container.register(VMRouteProtocol.self) { res in
+            VMRoute(baseNetwork: res.resolve(BaseNetWorkProtocol.self)!) }
         container.register(IPeopleRepo.self) { res in
+            PeopleRepoImpl(vmRouteProtocol: res.resolve(VMRouteProtocol.self)!)
+        }
+        container.register(PeopleRepoImpl.self) { res in
             PeopleRepoImpl(vmRouteProtocol: res.resolve(VMRouteProtocol.self)!)
         }
         container.register(IPeopleViewModel.self) { res in
