@@ -13,7 +13,6 @@ class PeopleTableViewCell: UITableViewCell {
     @IBOutlet weak var jobTitleLabel: UILabel!
     @IBOutlet weak var cardView: DesignView!
     @IBOutlet weak var locationButton: UIButton!
-    var location = Location()
     
     static let Identifier =  String(describing: PeopleTableViewCell.self)
     
@@ -24,7 +23,7 @@ class PeopleTableViewCell: UITableViewCell {
         emailLabel.useDefaultFont()
         jobTitleLabel.useDefaultFont()
         imageViewer.setImage(imageUrl: person.avatar)
-        fullNameLabel.text =  person.name
+        fullNameLabel.text =  person.fullName
         emailLabel.text =  person.email
         jobTitleLabel.text =  person.jobTitle
         cardView.shadowColor = UIColor.colorFromHexString(person.favouriteColor)

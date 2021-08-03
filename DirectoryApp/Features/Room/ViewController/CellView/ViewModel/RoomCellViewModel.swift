@@ -6,17 +6,16 @@
 //
 
 import Foundation
-
+import UIKit
 
 struct RoomCellViewModel {
-    let name, availability, capacity: String
-    let isOccupied: Bool
+    let name, isAvailable, capacity: String
+    let containerColor: UIColor
     
     init(room: VMRoomResponse) {
         self.name = "Room Name: \(room.name!)"
-        self.availability = room.isAvailable!
+        self.isAvailable = room.isOccupied! ? "Rooom Unavailable" : "Room Available"
         self.capacity =  "Room Capacity: \(room.maxOccupancy!)"
-        self.isOccupied = room.isOccupied!
-       
+        self.containerColor = (room.isOccupied! ? ThemeManager.currentTheme().dangerColor  :   ThemeManager.currentTheme().sucessColor)!
     }
 }

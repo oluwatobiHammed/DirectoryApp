@@ -10,7 +10,7 @@ import RxSwift
 import Alamofire
 
 class VMRoute: VMRouteProtocol  {
-        private let baseNetwork:  BaseNetWorkProtocol
+        private let baseNetwork: BaseNetWorkProtocol!
         private var timeOut : TimeInterval = 30
         private lazy var urlSession: URLSessionConfiguration = {
             urlSession.requestCachePolicy = .useProtocolCachePolicy
@@ -19,7 +19,7 @@ class VMRoute: VMRouteProtocol  {
             return urlSession
         }()
     
-    init(baseNetwork: BaseNetWorkProtocol, urlSession: URLSessionConfiguration = .default) {
+   init(baseNetwork: BaseNetWorkProtocol, urlSession: URLSessionConfiguration = .default) {
         self.baseNetwork = baseNetwork
         self.urlSession = urlSession
         

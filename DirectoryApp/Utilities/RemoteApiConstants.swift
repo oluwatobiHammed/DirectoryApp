@@ -37,7 +37,7 @@ class RemoteApiConstants {
             case .getRoom:
                 return     Endpoints.BASE_URL + "TGnC5c8e"
             case .getPeople:
-                return    Endpoints.BASE_URL + "kg02u"
+                return    Endpoints.BASE_URL + "kg02uve4"
             
             }
         }
@@ -47,19 +47,19 @@ class RemoteApiConstants {
 }
 
 
-enum SignupError: LocalizedError, Equatable {
-    
-    case invalidResponseModel
-    case invalidRequestURLString
-    case failedRequest(description: String)
-    
-    var errorDescription: String? {
-        switch self {
-        case .failedRequest(let description):
-            return description
-        case .invalidResponseModel, .invalidRequestURLString:
-            return ""
-        }
-    }
-    
-}
+//enum SignupError: LocalizedError, Equatable {
+//
+//    case invalidResponseModel
+//    case invalidRequestURLString
+//    case failedRequest(description: String)
+//
+//    var errorDescription: String? {
+//        switch self {
+//        case .failedRequest(let description):
+//            return description
+//        case .invalidResponseModel, .invalidRequestURLString:
+//            return ""
+//        }
+//    }
+//
+//}

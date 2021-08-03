@@ -22,11 +22,8 @@ class RoomTableViewCell: UITableViewCell {
         isOccupiedLabel.useDefaultFont()
         nameLabel.text = room.name
         capacityLabel.text = room.capacity
-        isOccupiedLabel.text = room.availability
-        containerUIView.shadowColor  =  room.isOccupied ? ThemeManager.currentTheme().dangerColor  :   ThemeManager.currentTheme().sucessColor
-            
-      
-        
+        isOccupiedLabel.text = room.isAvailable
+        containerUIView.shadowColor  =  room.containerColor
     }
     
 }

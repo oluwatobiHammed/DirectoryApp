@@ -14,10 +14,6 @@ struct VMRoomResponse: Codable {
     var maxOccupancy: Int?
     var isOccupied: Bool?
     
-    var isAvailable: String? {
-        return isOccupied ?? false ? "Rooom Unavailable" : "Room Available"
-    }
-    
     enum CodingKeys: String, CodingKey {
         case name, id
         case createdAt = "created_at"

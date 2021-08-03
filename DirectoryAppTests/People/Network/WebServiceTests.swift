@@ -112,29 +112,7 @@ class WebServiceTests: XCTestCase {
         self.wait(for: [expectation], timeout: 2)
     }
     
-    func testGetPeopleWebservice_WhenIncorrectURLStringProvided_ReturnsError() {
 
-        // Arrange
-        let urlString = "https://pastebin.com/raw/kg02"
-        let expectation = self.expectation(description: "An incorrect request URL string expectation")
-
-        // Act
-        sut.getPeople(urlString: urlString).subscribe { res in
-            print("code excuted")
-            // Assert
-            res.data!.forEach({ res in
-                XCTAssertNil(res, "The data couldn’t be read because it isn’t in the correct format, the response model must be nil")
-            })
-            expectation.fulfill()
-        } onError: { error in
-            print("code excuted")
-            XCTAssertEqual(error.asAFError.debugDescription, "The data couldn’t be read because it isn’t in the correct format", "The getPeople() method did not return an expected error for an invalidRequestURLString error")
-            expectation.fulfill()
-
-        }.disposed(by: disposeBag)
-
-        self.wait(for: [expectation], timeout: 2)
-    }
     
 
 
