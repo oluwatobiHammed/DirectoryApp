@@ -15,9 +15,11 @@ target 'DirectoryApp' do
   pod 'RxAlamofire', '~> 5'
   #Rx Google Maps SDK
   pod 'GoogleMaps', '5.1.0'
+  
   target 'DirectoryAppTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxTest', '~> 5'
   end
 
   target 'DirectoryAppUITests' do

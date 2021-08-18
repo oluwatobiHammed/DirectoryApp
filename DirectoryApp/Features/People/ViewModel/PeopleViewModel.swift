@@ -11,7 +11,7 @@ import RxCocoa
 class PeopleViewModel: BaseViewModel, IPeopleViewModel {
     
     var peopleResponses: PublishSubject<[PeopleTableViewCellViewModel]>  = PublishSubject()
-    private let peopleRepo: IPeopleRepo
+    let peopleRepo: IPeopleRepo
     
     
     required init(peopleRepo: IPeopleRepo) {

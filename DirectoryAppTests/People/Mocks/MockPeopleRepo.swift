@@ -21,6 +21,7 @@ class MockPeopleRepo: IPeopleRepo {
    }
     
     func getPeople() -> Observable<ApiResponse<[VMPeopleResponse]>> {
+        
         isGetPeopleMethodCalled = true
         return vmRouteProtocol!.getPeople(urlString: RemoteApiConstants.Endpoints.getPeople.stringValue)
     }

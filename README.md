@@ -8,7 +8,7 @@ The app navigates through 4 screens (named Home, People, Rooms) that do the foll
 2. People: Downloads a JSON payload for people and load it on the tableview
 3. Room: Downloads a JSON payload for room and displays it on the tableview
 
-## Repository Designe pattern
+## Repository Design pattern
 Repository pattern is a software design pattern that provides an abstraction of data, so that your application can work with a simple abstraction that has an interface. Using this pattern can help achieve loose coupling and can keep domain objects persistence ignorant.
 
 * https://medium.com/tiendeo-tech/ios-repository-pattern-in-swift-85a8c62bf436
