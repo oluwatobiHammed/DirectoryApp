@@ -117,6 +117,8 @@
 		31E13C1126C0497300C5E539 /* RoomTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C1026C0497300C5E539 /* RoomTableViewCellTest.swift */; };
 		31E13C1326C049F500C5E539 /* MockRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C1226C049F500C5E539 /* MockRoomViewModel.swift */; };
 		31E13C1626C0615800C5E539 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C1526C0615800C5E539 /* HomeViewControllerTests.swift */; };
+		31F86E3026CD5224001FFD71 /* PeopleViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F86E2F26CD5224001FFD71 /* PeopleViewModelTest.swift */; };
+		31F86E3426CD5D04001FFD71 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 31F86E3326CD5D04001FFD71 /* README.md */; };
 		69F196260651A8034EB4D511 /* Pods_DirectoryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1FF98520DD5E8984FE691D /* Pods_DirectoryApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -252,6 +254,8 @@
 		31E13C1026C0497300C5E539 /* RoomTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCellTest.swift; sourceTree = "<group>"; };
 		31E13C1226C049F500C5E539 /* MockRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoomViewModel.swift; sourceTree = "<group>"; };
 		31E13C1526C0615800C5E539 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		31F86E2F26CD5224001FFD71 /* PeopleViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModelTest.swift; sourceTree = "<group>"; };
+		31F86E3326CD5D04001FFD71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		369F6B248A10EB759096AD3C /* Pods-DirectoryApp-DirectoryAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectoryApp-DirectoryAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-DirectoryApp-DirectoryAppUITests/Pods-DirectoryApp-DirectoryAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1FF98520DD5E8984FE691D /* Pods_DirectoryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DirectoryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C77566F7F11967D915F7B9A /* Pods-DirectoryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectoryApp.debug.xcconfig"; path = "Target Support Files/Pods-DirectoryApp/Pods-DirectoryApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -311,6 +315,7 @@
 		3180D9D72694AC8F00198958 = {
 			isa = PBXGroup;
 			children = (
+				31F86E3326CD5D04001FFD71 /* README.md */,
 				3180D9E22694AC8F00198958 /* DirectoryApp */,
 				3180D9F92694AC9000198958 /* DirectoryAppTests */,
 				3180DA042694AC9000198958 /* DirectoryAppUITests */,
@@ -744,6 +749,7 @@
 		31E13BF926B98B8F00C5E539 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				31F86E2E26CD51FE001FFD71 /* ViewModel */,
 				31E13BFA26B98BAD00C5E539 /* PeopleTableViewCellTest.swift */,
 			);
 			path = View;
@@ -796,6 +802,14 @@
 				31E13C1526C0615800C5E539 /* HomeViewControllerTests.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		31F86E2E26CD51FE001FFD71 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				31F86E2F26CD5224001FFD71 /* PeopleViewModelTest.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E5CC316A48273F41743692A5 /* Frameworks */ = {
@@ -974,6 +988,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F86E3426CD5D04001FFD71 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1204,6 +1219,7 @@
 				31E13BFD26BD329100C5E539 /* MockPeopleViewModel.swift in Sources */,
 				31E13BFB26B98BAD00C5E539 /* PeopleTableViewCellTest.swift in Sources */,
 				31E13C0926C033AF00C5E539 /* MockRoomRepo.swift in Sources */,
+				31F86E3026CD5224001FFD71 /* PeopleViewModelTest.swift in Sources */,
 				31E13BEB26B307E300C5E539 /* MockVMRoute.swift in Sources */,
 				31E13C0026BF0BF000C5E539 /* PeopleResponseTests.swift in Sources */,
 			);

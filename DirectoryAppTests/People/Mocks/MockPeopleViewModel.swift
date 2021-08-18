@@ -21,11 +21,20 @@ class MockPeopleViewModel: BaseViewModel, IPeopleViewModel {
     
     func getPeople() {
         isGetPeopleMethodCalled = true
-        peopleRepo?.getPeople().subscribe({ res in
-            if let peopleRes = res.element?.data {
+        peopleRepo?.getPeople().subscribe(onNext: { res in
+            if let peopleRes = res.data {
                 self.peopleResponses.onNext(peopleRes.map({return PeopleTableViewCellViewModel(people: $0)
                 }))
             }
+            else if let apiErr = res.error {
+                self.apiError.onNext(apiErr)
+                
+            }
+        },
+        
+        onError: { [weak self] error in
+            self?.isLoading.onNext(false)
+            self?.throwableError.onNext(error)
         }).dispose()
         
     }

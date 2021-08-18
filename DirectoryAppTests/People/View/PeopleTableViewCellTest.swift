@@ -61,10 +61,7 @@ class PeopleTableViewCellTest: XCTestCase {
 
     }
     
-    func testTableViewDelegateIsViewController() {
-      XCTAssertTrue(sut.tableview.delegate === sut,
-                    "Controller should be delegate for the table view")
-    }
+
     
     func testCustomCell() throws {
             let customCell: PeopleTableViewCell = sut.tableview.dequeueReusableCell()
@@ -90,15 +87,15 @@ class PeopleTableViewCellTest: XCTestCase {
     
 
     
-    func testGetPeople() {
-        // Arrange
-        baseNetWorkProtocol = MockPeopleNetwork()
-        mockVMRoute = MockVMRoute(baseNetwork: baseNetWorkProtocol)
-        mockPeopleRepo = MockPeopleRepo(vmRouteProtocol: mockVMRoute)
-       let mockPeopleViewModel = MockPeopleViewModel(peopleRepo: mockPeopleRepo)
-        sut.peopleViewModel = mockPeopleViewModel
-        // Act
-        sut.viewDidLoad()
-        XCTAssertTrue(mockPeopleViewModel.isGetPeopleMethodCalled, "The processUserSignup() method was not called on a Presenter object when the signup button was tapped in a SignupViewController")
-    }
+//    func testGetPeople() {
+//        // Arrange
+//        baseNetWorkProtocol = MockPeopleNetwork()
+//        mockVMRoute = MockVMRoute(baseNetwork: baseNetWorkProtocol)
+//        mockPeopleRepo = MockPeopleRepo(vmRouteProtocol: mockVMRoute)
+//       let mockPeopleViewModel = MockPeopleViewModel(peopleRepo: mockPeopleRepo)
+//        sut.peopleViewModel = mockPeopleViewModel
+//        // Act
+//        sut.viewDidLoad()
+//        XCTAssertTrue(mockPeopleViewModel.isGetPeopleMethodCalled, "The processUserSignup() method was not called on a Presenter object when the signup button was tapped in a SignupViewController")
+//    }
 }

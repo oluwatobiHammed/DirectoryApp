@@ -18,17 +18,19 @@ class PeopleViewModelTests: XCTestCase {
     var peopleRepo: PeopleRepoImpl!
     var baseNetwork: BaseNetWorkProtocol!
     var mockBaseNetwork: BaseNetWorkProtocol!
-    var sut: PeopleViewModel!
+    var sut: MockPeopleViewModel!
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+       
         baseNetwork = BaseNetWorkServices()
         mockBaseNetwork = MockPeopleNetwork()
         vmRoute = VMRoute(baseNetwork: baseNetwork)
         peopleRepo = PeopleRepoImpl(vmRouteProtocol: vmRoute)
         mockVMRoute = MockVMRoute(baseNetwork: mockBaseNetwork)
         mockPeopleRepo =  MockPeopleRepo(vmRouteProtocol: mockVMRoute)
-        sut = PeopleViewModel(peopleRepo: mockPeopleRepo)
+        sut = MockPeopleViewModel(peopleRepo: mockPeopleRepo)
+        
     }
     
     override func tearDown() {
@@ -49,12 +51,11 @@ class PeopleViewModelTests: XCTestCase {
         XCTAssertTrue(mockPeopleRepo.isGetPeopleMethodCalled, "The getPeople() method was not called in the PeopleViewModel class")
     }
     
-//
-//        func testPeopleRepo() {
-//            // Arrange
-//            let repo = peopleRepo.getPeople()
-//            let mock =  mockPeopleRepo.getPeople()
-//
-//            XCTAssertTrue(repo === mock)
-//        }
+
+        func testPeopleRepo() {
+            // Arrange
+            sut.getPeople()
+            XCTAssertTrue(sut.isGetPeopleMethodCalled, "The getPeople() method was not called in the PeopleViewModel class")
+            XCTAssertTrue(sut.isGetPeopleMethodCalled, "The getPeople() method was not called in the PeopleViewModel class")
+        }
 }
