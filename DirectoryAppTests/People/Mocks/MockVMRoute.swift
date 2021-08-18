@@ -11,17 +11,30 @@ import RxAlamofire
 import Alamofire
 @testable import DirectoryApp
 
-class MockVMRoute:  MockPeopleNetwork, VMRouteProtocol  {
+class MockVMRoute: VMRouteProtocol  {
     
     
+    private let baseNetwork: BaseNetWorkProtocol!
+    private var timeOut : TimeInterval = 30
+    private lazy var urlSession: URLSessionConfiguration = {
+        urlSession.requestCachePolicy = .useProtocolCachePolicy
+        urlSession.timeoutIntervalForResource = timeOut
+        urlSession.timeoutIntervalForRequest = timeOut
+        return urlSession
+    }()
+
+init(baseNetwork: BaseNetWorkProtocol, urlSession: URLSessionConfiguration = .default) {
+    self.baseNetwork = baseNetwork
+    self.urlSession = urlSession
     
+}
     func getPeople(urlString : String) -> Observable<ApiResponse<[VMPeopleResponse]>> {
-        return makeAPIRequestObservable(responseType: ApiResponse<[VMPeopleResponse]>.self, url: urlString, urlSession: .default, method: .get, params: [:], encoding: URLEncoding.default)
+        return baseNetwork.makeAPIRequestObservable(responseType: ApiResponse<[VMPeopleResponse]>.self, url: urlString, urlSession: .default, method: .get, params: [:], encoding: URLEncoding.default)
         
     }
     
     func getRoom(urlString : String) -> Observable<ApiResponse<[VMRoomResponse]>> {
-        return makeAPIRequestObservable(responseType: ApiResponse<[VMRoomResponse]>.self, url: urlString, urlSession: .default, method: .get, params: [:], encoding: URLEncoding.default)
+        return baseNetwork.makeAPIRequestObservable(responseType: ApiResponse<[VMRoomResponse]>.self, url: urlString, urlSession: .default, method: .get, params: [:], encoding: URLEncoding.default)
     }
     
     

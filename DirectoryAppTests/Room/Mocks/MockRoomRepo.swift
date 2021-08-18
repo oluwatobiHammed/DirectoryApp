@@ -1,15 +1,17 @@
 //
-//  MockPeopleRepo.swift
+//  MockRoomRepo.swift
 //  DirectoryAppTests
 //
-//  Created by Oladipupo Oluwatobi on 28/07/2021.
+//  Created by Oladipupo Oluwatobi on 08/08/2021.
 //
 
 import XCTest
 import RxSwift
 @testable import DirectoryApp
 
-class MockPeopleRepo: IPeopleRepo {
+class MockRoomRepo: IRoomRepo {
+   
+    
     var isGetPeopleMethodCalled: Bool = false
     
     let vmRouteProtocol: VMRouteProtocol?
@@ -20,9 +22,13 @@ class MockPeopleRepo: IPeopleRepo {
        
    }
     
-    func getPeople() -> Observable<ApiResponse<[VMPeopleResponse]>> {
+    func getRoom() -> Observable<ApiResponse<[VMRoomResponse]>> {
         isGetPeopleMethodCalled = true
-        return vmRouteProtocol!.getPeople(urlString: RemoteApiConstants.Endpoints.getPeople.stringValue)
+        return vmRouteProtocol!.getRoom(urlString: RemoteApiConstants.Endpoints.getRoom.stringValue)
     }
+    
+  
+
+ 
 
 }

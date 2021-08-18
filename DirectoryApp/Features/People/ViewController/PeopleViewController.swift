@@ -19,12 +19,15 @@ class PeopleViewController: BaseViewController, UIScrollViewDelegate, UITableVie
     override func getViewModel() -> BaseViewModel {
         return self.peopleViewModel as! BaseViewModel 
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getPeople()
-        tableview.delegate = self
+        tableview.rx.setDelegate(self).dispose()
         tableview.separatorStyle = .none
         tableview.register(UINib(nibName: PeopleTableViewCell.Identifier, bundle: nil), forCellReuseIdentifier:  PeopleTableViewCell.Identifier)
+        peopleViewModel?.getPeople()
     }
     
     
@@ -40,38 +43,39 @@ class PeopleViewController: BaseViewController, UIScrollViewDelegate, UITableVie
             }
         }
         peopleViewModel?.getPeople()
-        self.validateDisposable  = peopleViewModel?.peopleResponses.observeOn(MainScheduler.instance).bind(to: self.tableview.rx.items) {[weak self]  (tableView, index, element) in
+        self.validateDisposable  = peopleViewModel?.peopleResponses.observeOn(MainScheduler.instance).bind(to: self.tableview.rx.items(cellIdentifier: PeopleTableViewCell.Identifier, cellType: PeopleTableViewCell.self)) {[weak self]  (tableView, element, cell) in
           
-            let cell: PeopleTableViewCell = tableView.dequeueReusableCell()
             cell.config(element)
             self?.location.latitude = element.latitude
             self?.location.longitude = element.longitude
+            
             cell.addTapGesture {
                 let _ = StoryBoardsID.boardMain.requestNavigation(to: ViewControllerID.PeopleLoacationViewController , requestData: self?.location)
             }
-            return cell
-        }
-        
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offSetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        
-        if offSetY > contentHeight - scrollView.frame.height {
-            if !fetchingMore {
-                beginBatchFetch()
-            }
             
         }
-
+    
+        
     }
     
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let offSetY = scrollView.contentOffset.y
+//        let contentHeight = scrollView.contentSize.height
+//
+//        if offSetY > contentHeight - scrollView.frame.height {
+//            if !fetchingMore {
+//                beginBatchFetch()
+//            }
+//
+//        }
+//
+//    }
     
-    func beginBatchFetch()  {
-        fetchingMore = true
-        print("fetch more data")
-    }
+    
+//    func beginBatchFetch()  {
+//        fetchingMore = true
+//        print("fetch more data")
+//    }
     
     
     

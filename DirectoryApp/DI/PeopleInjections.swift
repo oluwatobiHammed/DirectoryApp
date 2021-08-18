@@ -11,7 +11,7 @@ import SwinjectStoryboard
 
 class PeopleInjections {
     static func setup(container: Container) {
-        container.register(BaseNetWorkProtocol.self) { res in
+        container.register(BaseNetWorkProtocol.self) { _ in
             BaseNetWorkServices() }
         container.register(VMRouteProtocol.self) { res in
             VMRoute(baseNetwork: res.resolve(BaseNetWorkProtocol.self)!) }

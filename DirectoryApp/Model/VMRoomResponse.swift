@@ -12,7 +12,7 @@ struct VMRoomResponse: Codable {
     
     let id, createdAt, name: String?
     var maxOccupancy: Int?
-    var isOccupied: Bool?
+    var isOccupied: Bool? = false
     
     enum CodingKeys: String, CodingKey {
         case name, id

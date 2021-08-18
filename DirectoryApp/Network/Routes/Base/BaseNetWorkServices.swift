@@ -12,9 +12,6 @@ import RxAlamofire
 
 
 public class BaseNetWorkServices: BaseNetWorkProtocol {
-    private lazy var jsonEncoder = JSONEncoder()
-    private lazy var jsonDecoder = JSONDecoder()
-    
     
     fileprivate var requestHeaders: HTTPHeaders {
         return ["Content-Type": "text/plain", "Accept": "application/json"]
@@ -31,7 +28,7 @@ public class BaseNetWorkServices: BaseNetWorkProtocol {
             .validate(statusCode: 200 ..< 499)
             .debug()
             .responseString()
-            .flatMap { (_, responseString) -> Observable<T> in
+            .flatMapLatest { (_, responseString) -> Observable<T> in
                 do {
                     //check if the `responseString` contains the `errors` key, create a new json string with key `error`
                     //otherwise, create a new json string with key `data`

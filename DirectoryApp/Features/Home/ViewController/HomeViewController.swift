@@ -28,10 +28,10 @@ class HomeViewController: BaseViewController {
         
     }
     
-    @IBAction func SecondViewButtonTapped(_ sender: UIButton) {
+    @IBAction func PeopleButtonTapped(_ sender: UIButton) {
         let _ = StoryBoardsID.boardMain.requestNavigation(to: ViewControllerID.SecondViewController , requestData: nil)
     }
-    @IBAction func thirdButtonViewTapped(_ sender: UIButton) {
+    @IBAction func roomButtonViewTapped(_ sender: UIButton) {
         let _ = StoryBoardsID.boardMain.requestNavigation(to: ViewControllerID.RoomViewController , requestData: nil)
     }
     

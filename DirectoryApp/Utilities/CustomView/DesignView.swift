@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable class DesignView: UIView {
     
     @IBInspectable var cornerRadius: CGFloat = 0
-    @IBInspectable var shadowColor: UIColor? = ThemeManager.currentTheme().borderColor
+    @IBInspectable var shadowColor: UIColor? = .none
     @IBInspectable var shadowOffSetWidth: Int = 0
     @IBInspectable var shadowOffSetheight: Int = 0
     @IBInspectable var shadowOpacity : Float = 0.2

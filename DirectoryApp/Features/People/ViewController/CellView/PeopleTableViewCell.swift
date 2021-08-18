@@ -31,8 +31,6 @@ class PeopleTableViewCell: UITableViewCell {
     
 
     
-    @IBAction func mapButtonPressed(_ sender: UIButton) {
-        
-    }
+  
     
 }

@@ -107,6 +107,16 @@
 		31E13BF426B9771B00C5E539 /* PeopleCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13BF326B9771B00C5E539 /* PeopleCellViewModelTest.swift */; };
 		31E13BF826B97F4400C5E539 /* RoomCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13BF726B97F4400C5E539 /* RoomCellViewModelTests.swift */; };
 		31E13BFB26B98BAD00C5E539 /* PeopleTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13BFA26B98BAD00C5E539 /* PeopleTableViewCellTest.swift */; };
+		31E13BFD26BD329100C5E539 /* MockPeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13BFC26BD329100C5E539 /* MockPeopleViewModel.swift */; };
+		31E13C0026BF0BF000C5E539 /* PeopleResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13BFF26BF0BF000C5E539 /* PeopleResponseTests.swift */; };
+		31E13C0226BF0E2C00C5E539 /* RoomViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C0126BF0E2C00C5E539 /* RoomViewModelTests.swift */; };
+		31E13C0726BF206200C5E539 /* PeopleRepoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C0626BF206200C5E539 /* PeopleRepoTest.swift */; };
+		31E13C0926C033AF00C5E539 /* MockRoomRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C0826C033AF00C5E539 /* MockRoomRepo.swift */; };
+		31E13C0C26C0422A00C5E539 /* RoomWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C0B26C0422A00C5E539 /* RoomWebServiceTests.swift */; };
+		31E13C0E26C0443B00C5E539 /* roomResponse.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31E13C0D26C0443A00C5E539 /* roomResponse.txt */; };
+		31E13C1126C0497300C5E539 /* RoomTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C1026C0497300C5E539 /* RoomTableViewCellTest.swift */; };
+		31E13C1326C049F500C5E539 /* MockRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C1226C049F500C5E539 /* MockRoomViewModel.swift */; };
+		31E13C1626C0615800C5E539 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C1526C0615800C5E539 /* HomeViewControllerTests.swift */; };
 		69F196260651A8034EB4D511 /* Pods_DirectoryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1FF98520DD5E8984FE691D /* Pods_DirectoryApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -232,6 +242,16 @@
 		31E13BF326B9771B00C5E539 /* PeopleCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCellViewModelTest.swift; sourceTree = "<group>"; };
 		31E13BF726B97F4400C5E539 /* RoomCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCellViewModelTests.swift; sourceTree = "<group>"; };
 		31E13BFA26B98BAD00C5E539 /* PeopleTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCellTest.swift; sourceTree = "<group>"; };
+		31E13BFC26BD329100C5E539 /* MockPeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPeopleViewModel.swift; sourceTree = "<group>"; };
+		31E13BFF26BF0BF000C5E539 /* PeopleResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleResponseTests.swift; sourceTree = "<group>"; };
+		31E13C0126BF0E2C00C5E539 /* RoomViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModelTests.swift; sourceTree = "<group>"; };
+		31E13C0626BF206200C5E539 /* PeopleRepoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepoTest.swift; sourceTree = "<group>"; };
+		31E13C0826C033AF00C5E539 /* MockRoomRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoomRepo.swift; sourceTree = "<group>"; };
+		31E13C0B26C0422A00C5E539 /* RoomWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomWebServiceTests.swift; sourceTree = "<group>"; };
+		31E13C0D26C0443A00C5E539 /* roomResponse.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = roomResponse.txt; path = ../../../roomResponse.txt; sourceTree = "<group>"; };
+		31E13C1026C0497300C5E539 /* RoomTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCellTest.swift; sourceTree = "<group>"; };
+		31E13C1226C049F500C5E539 /* MockRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoomViewModel.swift; sourceTree = "<group>"; };
+		31E13C1526C0615800C5E539 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		369F6B248A10EB759096AD3C /* Pods-DirectoryApp-DirectoryAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectoryApp-DirectoryAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-DirectoryApp-DirectoryAppUITests/Pods-DirectoryApp-DirectoryAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1FF98520DD5E8984FE691D /* Pods_DirectoryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DirectoryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C77566F7F11967D915F7B9A /* Pods-DirectoryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DirectoryApp.debug.xcconfig"; path = "Target Support Files/Pods-DirectoryApp/Pods-DirectoryApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -335,6 +355,7 @@
 		3180D9F92694AC9000198958 /* DirectoryAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				31E13C1426C0612C00C5E539 /* Home */,
 				31E13BF526B97E9B00C5E539 /* Room */,
 				31E13BE126B1F12500C5E539 /* People */,
 				3180D9FA2694AC9000198958 /* DirectoryAppTests.swift */,
@@ -534,6 +555,7 @@
 		3180DAAA26974CDC00198958 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				31E13C0D26C0443A00C5E539 /* roomResponse.txt */,
 				319E5602269B6E2B0098BE48 /* response.txt */,
 				3180D9EC2694AC9000198958 /* Assets.xcassets */,
 			);
@@ -660,6 +682,8 @@
 		31E13BE126B1F12500C5E539 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				31E13C0526BF202E00C5E539 /* Repo */,
+				31E13BFE26BF0BA700C5E539 /* Model */,
 				31E13BF926B98B8F00C5E539 /* View */,
 				31E13BEC26B30DD600C5E539 /* Network */,
 				31E13BE526B1F61E00C5E539 /* Mocks */,
@@ -684,6 +708,7 @@
 				31E13BE826B29DDA00C5E539 /* MockPeopleNetwork.swift */,
 				31E13BEA26B307E300C5E539 /* MockVMRoute.swift */,
 				31E13BEF26B3128500C5E539 /* MockURLProtocol.swift */,
+				31E13BFC26BD329100C5E539 /* MockPeopleViewModel.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -699,6 +724,9 @@
 		31E13BF526B97E9B00C5E539 /* Room */ = {
 			isa = PBXGroup;
 			children = (
+				31E13C0F26C0495600C5E539 /* View */,
+				31E13C0A26C0420800C5E539 /* Network */,
+				31E13C0426BF1FE800C5E539 /* Mocks */,
 				31E13BF626B97ED300C5E539 /* ViewModel */,
 			);
 			path = Room;
@@ -708,6 +736,7 @@
 			isa = PBXGroup;
 			children = (
 				31E13BF726B97F4400C5E539 /* RoomCellViewModelTests.swift */,
+				31E13C0126BF0E2C00C5E539 /* RoomViewModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -718,6 +747,55 @@
 				31E13BFA26B98BAD00C5E539 /* PeopleTableViewCellTest.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		31E13BFE26BF0BA700C5E539 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31E13BFF26BF0BF000C5E539 /* PeopleResponseTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		31E13C0426BF1FE800C5E539 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				31E13C0826C033AF00C5E539 /* MockRoomRepo.swift */,
+				31E13C1226C049F500C5E539 /* MockRoomViewModel.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		31E13C0526BF202E00C5E539 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				31E13C0626BF206200C5E539 /* PeopleRepoTest.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		31E13C0A26C0420800C5E539 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				31E13C0B26C0422A00C5E539 /* RoomWebServiceTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		31E13C0F26C0495600C5E539 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31E13C1026C0497300C5E539 /* RoomTableViewCellTest.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31E13C1426C0612C00C5E539 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				31E13C1526C0615800C5E539 /* HomeViewControllerTests.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		E5CC316A48273F41743692A5 /* Frameworks */ = {
@@ -887,6 +965,7 @@
 				31D5E051269B532600BCAC1B /* RoomTableViewCell.xib in Resources */,
 				31BD36C526986F83003D1EB2 /* iconset-v3.ttf in Resources */,
 				31BD36D926986F83003D1EB2 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				31E13C0E26C0443B00C5E539 /* roomResponse.txt in Resources */,
 				31D5E043269AEBEF00BCAC1B /* PeopleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1111,13 +1190,22 @@
 				31E13BF026B3128500C5E539 /* MockURLProtocol.swift in Sources */,
 				31E13BF426B9771B00C5E539 /* PeopleCellViewModelTest.swift in Sources */,
 				3180D9FB2694AC9000198958 /* DirectoryAppTests.swift in Sources */,
+				31E13C0C26C0422A00C5E539 /* RoomWebServiceTests.swift in Sources */,
 				31E13BEE26B3111400C5E539 /* WebServiceTests.swift in Sources */,
+				31E13C0726BF206200C5E539 /* PeopleRepoTest.swift in Sources */,
+				31E13C0226BF0E2C00C5E539 /* RoomViewModelTests.swift in Sources */,
+				31E13C1126C0497300C5E539 /* RoomTableViewCellTest.swift in Sources */,
 				31E13BF826B97F4400C5E539 /* RoomCellViewModelTests.swift in Sources */,
 				31E13BE426B1F18700C5E539 /* PeopleViewModelTests.swift in Sources */,
+				31E13C1626C0615800C5E539 /* HomeViewControllerTests.swift in Sources */,
 				31E13BE726B1F6BA00C5E539 /* MockPeopleRepo.swift in Sources */,
+				31E13C1326C049F500C5E539 /* MockRoomViewModel.swift in Sources */,
 				31E13BE926B29DDA00C5E539 /* MockPeopleNetwork.swift in Sources */,
+				31E13BFD26BD329100C5E539 /* MockPeopleViewModel.swift in Sources */,
 				31E13BFB26B98BAD00C5E539 /* PeopleTableViewCellTest.swift in Sources */,
+				31E13C0926C033AF00C5E539 /* MockRoomRepo.swift in Sources */,
 				31E13BEB26B307E300C5E539 /* MockVMRoute.swift in Sources */,
+				31E13C0026BF0BF000C5E539 /* PeopleResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

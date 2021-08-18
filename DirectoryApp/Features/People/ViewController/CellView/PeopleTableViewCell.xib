@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIo-uK-mRX" customClass="DesignView" customModule="DirectoryApp" customModuleProvider="target">
-                        <rect key="frame" x="10" y="10" width="296" height="119.5"/>
+                        <rect key="frame" x="10" y="10" width="296" height="58"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zqs-LX-H1m" customClass="AnimatedImageView" customModule="Kingfisher">
                                 <rect key="frame" x="10" y="21" width="60" height="60"/>
@@ -30,22 +30,22 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RCc-2U-CmG">
-                                <rect key="frame" x="80" y="25" width="216" height="69.5"/>
+                                <rect key="frame" x="80" y="25" width="216" height="8"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXR-4B-12k">
-                                        <rect key="frame" x="0.0" y="0.0" width="216" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXR-4B-12k">
+                                        <rect key="frame" x="0.0" y="0.0" width="216" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdr-AM-f3I">
-                                        <rect key="frame" x="0.0" y="24.5" width="216" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdr-AM-f3I">
+                                        <rect key="frame" x="0.0" y="4" width="216" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikv-rO-xnK">
-                                        <rect key="frame" x="0.0" y="49" width="216" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikv-rO-xnK">
+                                        <rect key="frame" x="0.0" y="8" width="216" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -59,9 +59,6 @@
                                     <constraint firstAttribute="height" constant="30" id="keX-zb-kMq"/>
                                 </constraints>
                                 <state key="normal" image="map" catalog="system"/>
-                                <connections>
-                                    <action selector="mapButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CBi-LA-5di"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -91,9 +88,6 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                 <real key="value" value="3"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
@@ -112,7 +106,6 @@
                 <outlet property="fullNameLabel" destination="FXR-4B-12k" id="BBU-aU-HcT"/>
                 <outlet property="imageViewer" destination="zqs-LX-H1m" id="36d-4H-4Ny"/>
                 <outlet property="jobTitleLabel" destination="ikv-rO-xnK" id="zZF-cA-glM"/>
-                <outlet property="locationButton" destination="plH-ev-0hF" id="OQs-Vn-q0g"/>
             </connections>
             <point key="canvasLocation" x="111.59420289855073" y="-51.5625"/>
         </tableViewCell>

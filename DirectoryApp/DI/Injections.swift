@@ -13,5 +13,6 @@ extension SwinjectStoryboard {
     public static func setup() {
         PeopleInjections.setup(container: defaultContainer)
         RoomInjections.setup(container: defaultContainer)
+        Container.loggingFunction = nil
     }
 }

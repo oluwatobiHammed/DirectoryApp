@@ -42,4 +42,18 @@ class RoomCellViewModelTests: XCTestCase {
         XCTAssertEqual("Room Available", sut.isAvailable)
         XCTAssertEqual(ThemeManager.currentTheme().sucessColor , sut.containerColor)
     }
+    
+    func testRoomIsNotOccupiedByDefault() {
+        room = VMRoomResponse(id: "1", createdAt: "2020-12-14T12:12:29.677Z", name: "Megaman", maxOccupancy: 10)
+        
+        XCTAssertFalse(room.isOccupied!,
+                     "Room should not be isOccupied by default")
+    }
+    
+    func testRoomCanBeSetToOccupied() {
+        room = VMRoomResponse(id: "1", createdAt: "2020-12-14T12:12:29.677Z", name: "Megaman", maxOccupancy: 10)
+        room.isOccupied = true
+    XCTAssertTrue(room.isOccupied!,
+                    "Room may be set to Occupied")
+    }
 }

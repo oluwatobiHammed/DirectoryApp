@@ -20,14 +20,13 @@ class PeopleViewModel: BaseViewModel, IPeopleViewModel {
     
     func getPeople() {
         self.isLoading.onNext(true)
-        peopleRepo.getPeople().subscribe ( onNext: { [weak self] res in
+        peopleRepo.getPeople().subscribe ( onNext: { [weak self]  in
             self?.isLoading.onNext(false)
-            if let peopleRes = res.data {
+            if let peopleRes = $0.data {
                 self?.peopleResponses.onNext(peopleRes.map({return PeopleTableViewCellViewModel(people: $0)
                 }))
             }
-            else if let apiErr = res.error {
-                print("Redirect to ", apiErr)
+            else if let apiErr = $0.error {
                 self?.apiError.onNext(apiErr)
                 
             }
