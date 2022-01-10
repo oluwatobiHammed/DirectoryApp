@@ -17,14 +17,14 @@ class PeopleTableViewCellTest: XCTestCase {
     var baseNetWorkProtocol: MockPeopleNetwork!
     var storyboard: UIStoryboard!
     var sut: PeopleViewController!
-    var person: PeopleTableViewCellViewModel!
+    var person: PeopleCellViewModel!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
        
         storyboard = UIStoryboard(name: "Main", bundle: nil)
         sut = storyboard.instantiateViewController(identifier: "SecondViewController") as PeopleViewController
         people = VMPeopleResponse(avatar: "https://randomuser.me/api/portraits/women/13.jpg", createdAt: "(927) 840-0095 x2527", firstName: "Maybell", id: "1", favouriteColor: "#122a33", email: "Izaiah.Little@hotmail.com", jobTitle: "Customer Markets Architect", lastName: "Durgan", phone: "(927) 840-0095 x2527", longitude: 139.6922, latitude: 35.6897)
-        person = PeopleTableViewCellViewModel(people: people)
+        person = PeopleCellViewModel(people: people)
       
         _ = sut.view
         sut.loadViewIfNeeded()
@@ -78,11 +78,11 @@ class PeopleTableViewCellTest: XCTestCase {
         XCTAssertEqual(cardView.shadowColor, .none, "Card View ShadowColor was .none when the view controller initially loaded")
         
         customCell.config(person)
-        XCTAssertEqual(fullNameLabel.text, person.fullName, "Full Name Label suppose  to  be equal to the value of person full name")
+        XCTAssertEqual(fullNameLabel.text, person.name, "Full Name Label suppose  to  be equal to the value of person full name")
         XCTAssertEqual(emailLabel.text, person.email, "Email Label  suppose  to  be equal to the value of person Email")
         XCTAssertEqual(jobTitleLabel.text, person.jobTitle, "Job Title Label  suppose  to  be equal to the value of person Job Title")
         
-        XCTAssertEqual(cardView.shadowColor, UIColor.colorFromHexString(person.favouriteColor), "Card View ShadowColor suppose  to  be equal to the value of person favourite color")
+        XCTAssertEqual(cardView.shadowColor, UIColor.colorFromHexString(person.color), "Card View ShadowColor suppose  to  be equal to the value of person favourite color")
         }
     
 

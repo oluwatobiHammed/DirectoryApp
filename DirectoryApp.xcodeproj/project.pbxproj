@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		0EF5084B429BB2CAC27C5282 /* Pods_DirectoryAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2047869DBC85969F4F2AD2B /* Pods_DirectoryAppTests.framework */; };
 		17D525290BF47134985845A7 /* Pods_DirectoryApp_DirectoryAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AAE5B1B1DFCD1DA76180DC /* Pods_DirectoryApp_DirectoryAppUITests.framework */; };
-		316A799E26A6F4350079E46D /* PeopleTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A799D26A6F4350079E46D /* PeopleTableViewCellViewModel.swift */; };
+		3117B33A2788ADC4004C50D5 /* PeopleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3117B3392788ADC4004C50D5 /* PeopleCellViewModel.swift */; };
+		3134A487278C023F00E7251C /* peopleResponse.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3134A486278C023F00E7251C /* peopleResponse.txt */; };
+		3134A48B278C02F800E7251C /* roomResponse.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3134A48A278C02F800E7251C /* roomResponse.txt */; };
 		316A79A126A6F7760079E46D /* RoomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A79A026A6F7760079E46D /* RoomCellViewModel.swift */; };
 		316A79A326A71D750079E46D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A79A226A71D750079E46D /* UIImage+Extension.swift */; };
 		316A79A526A72F380079E46D /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A79A426A72F380079E46D /* UITableView+Extension.swift */; };
@@ -47,7 +49,6 @@
 		3180DAA626971C6600198958 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180DAA526971C6600198958 /* PeopleViewModel.swift */; };
 		3180DAA926972AD600198958 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180DAA826972AD600198958 /* BaseViewModel.swift */; };
 		3180DAB026974EF200198958 /* Injections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180DAAF26974EF200198958 /* Injections.swift */; };
-		319E5603269B6E2C0098BE48 /* response.txt in Resources */ = {isa = PBXBuildFile; fileRef = 319E5602269B6E2B0098BE48 /* response.txt */; };
 		319E5605269C18E70098BE48 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319E5604269C18E70098BE48 /* Bundle+extension.swift */; };
 		31BD3690269752B6003D1EB2 /* PeopleInjections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BD368F269752B6003D1EB2 /* PeopleInjections.swift */; };
 		31BD36942697961F003D1EB2 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BD36932697961F003D1EB2 /* RoomViewController.swift */; };
@@ -113,7 +114,6 @@
 		31E13C0726BF206200C5E539 /* PeopleRepoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C0626BF206200C5E539 /* PeopleRepoTest.swift */; };
 		31E13C0926C033AF00C5E539 /* MockRoomRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C0826C033AF00C5E539 /* MockRoomRepo.swift */; };
 		31E13C0C26C0422A00C5E539 /* RoomWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C0B26C0422A00C5E539 /* RoomWebServiceTests.swift */; };
-		31E13C0E26C0443B00C5E539 /* roomResponse.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31E13C0D26C0443A00C5E539 /* roomResponse.txt */; };
 		31E13C1126C0497300C5E539 /* RoomTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C1026C0497300C5E539 /* RoomTableViewCellTest.swift */; };
 		31E13C1326C049F500C5E539 /* MockRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C1226C049F500C5E539 /* MockRoomViewModel.swift */; };
 		31E13C1626C0615800C5E539 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E13C1526C0615800C5E539 /* HomeViewControllerTests.swift */; };
@@ -140,7 +140,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		316A799D26A6F4350079E46D /* PeopleTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		3117B3392788ADC4004C50D5 /* PeopleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCellViewModel.swift; sourceTree = "<group>"; };
+		3134A486278C023F00E7251C /* peopleResponse.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = peopleResponse.txt; path = ../../../peopleResponse.txt; sourceTree = "<group>"; };
+		3134A48A278C02F800E7251C /* roomResponse.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = roomResponse.txt; path = ../../../roomResponse.txt; sourceTree = "<group>"; };
 		316A79A026A6F7760079E46D /* RoomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCellViewModel.swift; sourceTree = "<group>"; };
 		316A79A226A71D750079E46D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		316A79A426A72F380079E46D /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
@@ -184,7 +186,6 @@
 		3180DAA526971C6600198958 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		3180DAA826972AD600198958 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		3180DAAF26974EF200198958 /* Injections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injections.swift; sourceTree = "<group>"; };
-		319E5602269B6E2B0098BE48 /* response.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = response.txt; path = ../../../../Desktop/response.txt; sourceTree = "<group>"; };
 		319E5604269C18E70098BE48 /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		31BD368F269752B6003D1EB2 /* PeopleInjections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInjections.swift; sourceTree = "<group>"; };
 		31BD36932697961F003D1EB2 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
@@ -250,7 +251,6 @@
 		31E13C0626BF206200C5E539 /* PeopleRepoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepoTest.swift; sourceTree = "<group>"; };
 		31E13C0826C033AF00C5E539 /* MockRoomRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoomRepo.swift; sourceTree = "<group>"; };
 		31E13C0B26C0422A00C5E539 /* RoomWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomWebServiceTests.swift; sourceTree = "<group>"; };
-		31E13C0D26C0443A00C5E539 /* roomResponse.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = roomResponse.txt; path = ../../../roomResponse.txt; sourceTree = "<group>"; };
 		31E13C1026C0497300C5E539 /* RoomTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCellTest.swift; sourceTree = "<group>"; };
 		31E13C1226C049F500C5E539 /* MockRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoomViewModel.swift; sourceTree = "<group>"; };
 		31E13C1526C0615800C5E539 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
@@ -295,13 +295,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		316A799C26A6F4350079E46D /* ViewModel */ = {
+		3134A48C278C214000E7251C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				316A799D26A6F4350079E46D /* PeopleTableViewCellViewModel.swift */,
+				3117B3392788ADC4004C50D5 /* PeopleCellViewModel.swift */,
 			);
-			name = ViewModel;
-			path = ../../../../../../ViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		316A799F26A6F7470079E46D /* ViewModel */ = {
@@ -560,8 +559,8 @@
 		3180DAAA26974CDC00198958 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				31E13C0D26C0443A00C5E539 /* roomResponse.txt */,
-				319E5602269B6E2B0098BE48 /* response.txt */,
+				3134A48A278C02F800E7251C /* roomResponse.txt */,
+				3134A486278C023F00E7251C /* peopleResponse.txt */,
 				3180D9EC2694AC9000198958 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -667,7 +666,7 @@
 		31BD36FC2699C8BC003D1EB2 /* CellView */ = {
 			isa = PBXGroup;
 			children = (
-				316A799C26A6F4350079E46D /* ViewModel */,
+				3134A48C278C214000E7251C /* ViewModel */,
 				31D5E040269AEBEF00BCAC1B /* PeopleTableViewCell.swift */,
 				31D5E041269AEBEF00BCAC1B /* PeopleTableViewCell.xib */,
 			);
@@ -951,6 +950,7 @@
 				31BD36EE26999430003D1EB2 /* 18451-ghcalvo.json in Resources */,
 				31BD36EF26999430003D1EB2 /* 18028-sports-loader.json in Resources */,
 				31BD36CC26986F83003D1EB2 /* Montserrat-Thin.ttf in Resources */,
+				3134A48B278C02F800E7251C /* roomResponse.txt in Resources */,
 				31BD36CB26986F83003D1EB2 /* Montserrat-ExtraLight.ttf in Resources */,
 				31BD36F126999430003D1EB2 /* 2668-ball.json in Resources */,
 				31BD36C626986F83003D1EB2 /* Montserrat-BoldItalic.ttf in Resources */,
@@ -964,7 +964,7 @@
 				31BD36C826986F83003D1EB2 /* Montserrat-Light.ttf in Resources */,
 				31BD36CD26986F83003D1EB2 /* Montserrat-Bold.ttf in Resources */,
 				31BD36D526986F83003D1EB2 /* Montserrat-Regular.ttf in Resources */,
-				319E5603269B6E2C0098BE48 /* response.txt in Resources */,
+				3134A487278C023F00E7251C /* peopleResponse.txt in Resources */,
 				31BD36C926986F83003D1EB2 /* Montserrat-ThinItalic.ttf in Resources */,
 				3180DA202694BEFD00198958 /* Main.storyboard in Resources */,
 				31BD36F026999430003D1EB2 /* 17434-soccer-player.json in Resources */,
@@ -980,7 +980,6 @@
 				31D5E051269B532600BCAC1B /* RoomTableViewCell.xib in Resources */,
 				31BD36C526986F83003D1EB2 /* iconset-v3.ttf in Resources */,
 				31BD36D926986F83003D1EB2 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
-				31E13C0E26C0443B00C5E539 /* roomResponse.txt in Resources */,
 				31D5E043269AEBEF00BCAC1B /* PeopleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1172,10 +1171,10 @@
 				3180DA562695869600198958 /* BaseNetWorkServices.swift in Sources */,
 				31BD36DD2698C0C0003D1EB2 /* UIButtonExtension.swift in Sources */,
 				3180DA8C26970D2600198958 /* ErrorMessage.swift in Sources */,
+				3117B33A2788ADC4004C50D5 /* PeopleCellViewModel.swift in Sources */,
 				31D5E045269AF61800BCAC1B /* UIImageView+extension.swift in Sources */,
 				319E5605269C18E70098BE48 /* Bundle+extension.swift in Sources */,
 				3180DA2D2694EE4600198958 /* GlobalControllerStoryID.swift in Sources */,
-				316A799E26A6F4350079E46D /* PeopleTableViewCellViewModel.swift in Sources */,
 				3180DA6D2695A29900198958 /* ApplicationUtility.swift in Sources */,
 				3180DA302694EF4D00198958 /* UIViewControll+Extension.swift in Sources */,
 				316A79A526A72F380079E46D /* UITableView+Extension.swift in Sources */,

@@ -11,8 +11,8 @@ import RxSwift
 
 class MockPeopleViewModel: BaseViewModel, IPeopleViewModel {
     var isGetPeopleMethodCalled: Bool = false
-    var peopleResponses: PublishSubject<[PeopleTableViewCellViewModel]>  = PublishSubject()
-    var peopleArray = [PeopleTableViewCellViewModel]()
+    var peopleResponses: PublishSubject<[PeopleCellViewModel]>  = PublishSubject()
+    var peopleArray = [PeopleCellViewModel]()
     
     let peopleRepo: IPeopleRepo?
     required init(peopleRepo: IPeopleRepo) {
@@ -23,7 +23,7 @@ class MockPeopleViewModel: BaseViewModel, IPeopleViewModel {
         isGetPeopleMethodCalled = true
         peopleRepo?.getPeople().subscribe(onNext: { res in
             if let peopleRes = res.data {
-                self.peopleResponses.onNext(peopleRes.map({return PeopleTableViewCellViewModel(people: $0)
+                self.peopleResponses.onNext(peopleRes.map({return PeopleCellViewModel(people: $0)
                 }))
             }
             else if let apiErr = res.error {

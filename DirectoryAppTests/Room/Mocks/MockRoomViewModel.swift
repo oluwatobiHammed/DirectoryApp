@@ -16,7 +16,7 @@ class MockRoomViewModel: BaseViewModel, IRoomViewModel {
     
     var isGetPeopleMethodCalled: Bool = false
     var roomResponses: PublishSubject<[RoomCellViewModel]>  = PublishSubject()
-    var peopleArray = [PeopleTableViewCellViewModel]()
+    var peopleArray = [PeopleCellViewModel]()
     
     let roomRepo: IRoomRepo?
     required init(roomRepo: IRoomRepo) {

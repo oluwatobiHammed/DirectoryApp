@@ -37,14 +37,14 @@ class PeopleViewController: BaseViewController, UIScrollViewDelegate, UITableVie
         navigationController?.navigationBar.prefersLargeTitles = true
         tableview.contentInsetAdjustmentBehavior = .never
        
-        if peopleViewModel?.peopleResponses != nil {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.showAlert(message: "Click on Profile view Location", type: .info)
-            }
-        }
+//        if peopleViewModel?.peopleResponses != nil {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//                self.showAlert(message: "Click on Profile view Location", type: .info)
+//            }
+//        }
         peopleViewModel?.getPeople()
         self.validateDisposable  = peopleViewModel?.peopleResponses.observeOn(MainScheduler.instance).bind(to: self.tableview.rx.items(cellIdentifier: PeopleTableViewCell.Identifier, cellType: PeopleTableViewCell.self)) {[weak self]  (tableView, element, cell) in
-          
+             print(element)
             cell.config(element)
             self?.location.latitude = element.latitude
             self?.location.longitude = element.longitude

@@ -14,6 +14,17 @@ struct VMPeopleResponse: Codable {
         jobTitle, lastName,
         phone: String?
     let longitude, latitude: Double?
+    
+    var fullName: String? {
+        guard let firstName = firstName else {
+            return ""
+        }
+        guard let lastName = lastName else {
+            return ""
+        }
+
+        return firstName + lastName
+    }
 }
 
 

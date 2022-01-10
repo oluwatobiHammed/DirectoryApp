@@ -37,7 +37,7 @@ class WebServiceTests: XCTestCase {
         MockURLProtocol.requestHandler = { request in
          
             let response = HTTPURLResponse.init(url: request.url!, statusCode: 200, httpVersion: "2.0", headerFields: nil)!
-            return (response, Bundle.main.decode(from: "response.txt"))
+            return (response, Bundle.main.decode(from: "peopleResponse.txt"))
         }
         let expectation = self.expectation(description: "getPeople Web Service Response Expectation")
         // Act

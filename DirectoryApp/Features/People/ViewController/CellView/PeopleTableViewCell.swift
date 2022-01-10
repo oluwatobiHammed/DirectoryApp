@@ -16,17 +16,17 @@ class PeopleTableViewCell: UITableViewCell {
     
     static let Identifier =  String(describing: PeopleTableViewCell.self)
     
-    func config ( _ person: PeopleTableViewCellViewModel)
+    func config ( _ person: PeopleCellViewModel)
     {
         imageViewer.layer.cornerRadius = 27
         fullNameLabel.useDefaultFont()
         emailLabel.useDefaultFont()
         jobTitleLabel.useDefaultFont()
         imageViewer.setImage(imageUrl: person.avatar)
-        fullNameLabel.text =  person.fullName
+        fullNameLabel.text =  person.name
         emailLabel.text =  person.email
         jobTitleLabel.text =  person.jobTitle
-        cardView.shadowColor = UIColor.colorFromHexString(person.favouriteColor)
+        cardView.shadowColor = UIColor.colorFromHexString(person.color)
     }
     
 
